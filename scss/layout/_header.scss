@@ -1,0 +1,61 @@
+@use "../abstrasts/variables";
+
+%flexItemsCenter {
+    display: flex;
+    align-items: center
+}
+
+;
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+    .navbar {
+        &__list {
+            @extend %flexItemsCenter;
+            gap: 20px;
+        }
+
+        &__link {
+            @extend %flexItemsCenter;
+            gap: 6px;
+            font-weight: 700;
+        }
+
+        &__arrow {
+            margin-top: 3px;
+        }
+    }
+}
+
+.top-actions {
+    @extend %flexItemsCenter;
+    gap: 20px;
+
+    &__user {
+        @extend %flexItemsCenter;
+        gap: 10px;
+        cursor: pointer;
+
+
+        a,
+        span {
+            font-family: "Jost", sans-serif;
+            font-weight: 500;
+        }
+    }
+
+    &__btn {
+        @extend %flexItemsCenter;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid variables.$primary-color;
+        cursor: pointer;
+    }
+}

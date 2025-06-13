@@ -1,0 +1,10 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+    }
+}

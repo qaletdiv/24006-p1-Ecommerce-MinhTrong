@@ -1,0 +1,10 @@
+@use "../abstrasts";
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+
+    &--primary {
+        background-color: abstrasts.$primary-color;
+    }
+}

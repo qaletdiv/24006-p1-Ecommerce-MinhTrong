@@ -1,7 +1,13 @@
+@use "../abstrasts";
+
 .form {
 
     &__group {
         margin-top: 30px;
+
+        @include abstrasts.screen(md) {
+            margin-top: 20px;
+        }
 
         &--inline {
             display: flex;

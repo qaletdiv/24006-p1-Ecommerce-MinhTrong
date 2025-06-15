@@ -252,9 +252,30 @@ select {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 991.98px) {
+  .logo {
+    gap: 10px;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .logo {
+    margin-left: 0;
+  }
+}
 .logo__title {
   font-size: 28px;
   font-weight: 700;
+}
+@media (max-width: 991.98px) {
+  .logo__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .logo__img {
+    width: 24px;
+  }
 }
 
 .filter-btn {
@@ -339,6 +360,11 @@ select {
 
 .form__group {
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
 }
 .form__group--inline {
   display: flex;
@@ -1564,6 +1590,11 @@ select {
   margin: 0 auto;
   padding: 50px 0;
 }
+@media (max-width: 767.98px) {
+  .auth__content-inner {
+    padding: 25px 0px;
+  }
+}
 .auth__heading {
   margin-top: 50px;
   font-size: 30px;
@@ -1571,9 +1602,15 @@ select {
   font-weight: 500;
   line-height: 146.667%;
 }
+@media (max-width: 767.98px) {
+  .auth__heading {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+}
 .auth__desc {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #9E9DA8;
   font-size: 15px;
   font-weight: 500;
@@ -1595,8 +1632,19 @@ select {
   gap: 30px;
   margin-top: 50px;
 }
+@media (max-width: 767.98px) {
+  .auth__btn-group {
+    margin-top: 40px;
+    gap: 20px;
+  }
+}
 .auth__btn {
   width: 100%;
+}
+@media (max-width: 767.98px) {
+  .auth__btn {
+    font-size: 20px;
+  }
 }
 .auth__text {
   margin-top: 108px;
@@ -1604,6 +1652,15 @@ select {
   font-size: 18px;
   font-weight: 400;
   line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .auth__text {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+}
+.auth__text-link {
+  font-size: inherit;
 }
 
 html {

@@ -1,10 +1,31 @@
+@use "../abstrasts";
+
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 
+    @include abstrasts.screen(lg) {
+        gap: 10px;
+        margin-left: 40px;
+    }
+
+    @include abstrasts.screen(md) {
+        margin-left: 0;
+    }
+
     &__title {
         font-size: 28px;
         font-weight: 700;
+
+        @include abstrasts.screen(lg) {
+            font-size: 20px;
+        }
+    }
+
+    &__img {
+        @include abstrasts.screen(lg) {
+            width: 24px;
+        }
     }
 }

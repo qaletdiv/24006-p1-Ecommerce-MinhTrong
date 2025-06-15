@@ -72,6 +72,10 @@
             width: min(460px, 100%);
             margin: 0 auto;
             padding: 50px 0;
+
+            @include abstrasts.screen(md) {
+                padding: 25px 0px;
+            }
         }
     }
 
@@ -81,11 +85,16 @@
         font-style: normal;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstrasts.screen(md) {
+            margin-top: 40px;
+            font-size: 24px;
+        }
     }
 
     &__desc {
         margin-top: 10px;
-        padding: 0 30px;
+        padding: 0 20px;
         color: #9E9DA8;
         font-size: 15px;
         font-weight: 500;
@@ -109,10 +118,19 @@
         flex-direction: column;
         gap: 30px;
         margin-top: 50px;
+
+        @include abstrasts.screen(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
 
     &__btn {
         width: 100%;
+
+        @include abstrasts.screen(md) {
+            font-size: 20px;
+        }
     }
 
     &__text {
@@ -120,6 +138,15 @@
         color: #9E9DA8;
         font-size: 18px;
         font-weight: 400;
-        line-height: 144.444%
+        line-height: 144.444%;
+
+        @include abstrasts.screen(md) {
+            margin-top: 40px;
+            font-size: 16px;
+        }
+
+        &-link {
+            font-size: inherit;
+        }
     }
 }

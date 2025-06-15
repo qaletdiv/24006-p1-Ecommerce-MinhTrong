@@ -450,6 +450,19 @@ select {
   top: 5px;
 }
 
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  border: 1px solid #46a05c;
+  background: rgba(39, 243, 117, 0.2);
+}
+
 .top-actions__btn, .top-actions__user, .top-actions, .top-bar .navbar__link, .top-bar .navbar__list {
   display: flex;
   align-items: center;
@@ -1558,7 +1571,7 @@ select {
   bottom: 50px;
 }
 .auth__intro-img {
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .auth__intro-text {
   max-width: 412px;
@@ -1616,9 +1629,20 @@ select {
   font-weight: 500;
   line-height: 146.667%;
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
+}
+@media (max-width: 767.98px) {
+  .auth__form {
+    margin-top: 0px;
+  }
 }
 .auth__link {
   color: #0071DC;
@@ -1631,6 +1655,7 @@ select {
   flex-direction: column;
   gap: 30px;
   margin-top: 50px;
+  font-family: "Jost", sans-serif;
 }
 @media (max-width: 767.98px) {
   .auth__btn-group {
@@ -1640,11 +1665,7 @@ select {
 }
 .auth__btn {
   width: 100%;
-}
-@media (max-width: 767.98px) {
-  .auth__btn {
-    font-size: 20px;
-  }
+  font-size: 20px;
 }
 .auth__text {
   margin-top: 108px;

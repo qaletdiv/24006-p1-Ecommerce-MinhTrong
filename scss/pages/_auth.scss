@@ -36,7 +36,7 @@
         }
 
         &-img {
-            max-width: 100%;
+            width: min(424px, 100%);
         }
 
         &-text {
@@ -101,9 +101,21 @@
         line-height: 146.667%;
     }
 
+    &__message {
+        margin-top: 30px;
+    }
+
     &__form {
         width: 100%;
-        margin-top: 60px;
+        margin-top: 30px;
+
+        &-forgot {
+            margin-top: 10px;
+        }
+
+        @include abstrasts.screen(md) {
+            margin-top: 0px;
+        }
     }
 
     &__link {
@@ -118,6 +130,9 @@
         flex-direction: column;
         gap: 30px;
         margin-top: 50px;
+        font-family: "Jost", sans-serif;
+
+
 
         @include abstrasts.screen(md) {
             margin-top: 40px;
@@ -127,10 +142,8 @@
 
     &__btn {
         width: 100%;
+        font-size: 20px;
 
-        @include abstrasts.screen(md) {
-            font-size: 20px;
-        }
     }
 
     &__text {

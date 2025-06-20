@@ -1,0 +1,16 @@
+.breakcrumb {
+    background-color: var(--bg-color-secondary);
+    padding: 22px 0;
+
+
+}
+
+.breadcrumb__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .breadcrumb__arrow {
+        margin-bottom: 2px;
+    }
+}

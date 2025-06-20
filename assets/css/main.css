@@ -142,7 +142,8 @@ table {
 
 :root {
   --primary-color: #FF782D;
-  --bg-color: #F5F5F5;
+  --bg-color: #FFFFFF;
+  --bg-color-secondary: #F5F5F5;
   --text-color: #000000;
   --text-color-secondary: #555555;
   --text-color-third: #9D9D9D;
@@ -170,6 +171,10 @@ select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+}
+
+input::placeholder {
+  font-size: 16px;
 }
 
 .heading {
@@ -278,7 +283,7 @@ select {
 .container-fluid, .container {
   --grid-gutter-x: 30px;
   --grid-gutter-y: 0;
-  width: 100% px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1611,6 +1616,20 @@ select {
   font-weight: 500;
 }
 
+.breakcrumb {
+  background-color: var(--bg-color-secondary);
+  padding: 22px 0;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.breadcrumb__list .breadcrumb__arrow {
+  margin-bottom: 2px;
+}
+
 .top-actions__btn, .top-actions__user, .top-actions, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -2067,6 +2086,91 @@ select {
   border-radius: 40px;
   color: #fff;
   font-weight: 400;
+}
+
+.course {
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+.course__container {
+  display: flex;
+  gap: 30px;
+}
+
+.course__left {
+  max-width: 990px;
+}
+.course__left-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.course__left-heading h2 {
+  font-weight: 600;
+  font-size: 38px;
+}
+
+.course__left-filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.course__left-filter__input {
+  display: flex;
+  border-bottom: 1px solid #333;
+  padding-bottom: 4px;
+}
+.course__left-filter__input-field {
+  min-width: 270px;
+}
+.course__left-filter__icon {
+  padding-bottom: 6px;
+}
+
+.course__left-cta {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.course__left-cta__box-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.course__left-cta__box-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.course__right {
+  flex-grow: 1;
+}
+.course__right h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.course__right-cate {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cate__subject h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.cate__subject-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-self: center;
 }
 
 html {

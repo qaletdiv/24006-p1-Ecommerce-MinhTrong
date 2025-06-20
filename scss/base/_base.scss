@@ -5,9 +5,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: rgba(255, 120, 45, 1);
+    --bg-color: #F5F5F5;
+
+    --text-color: #000000;
+    --text-color-secondary: #555555;
+    --text-color-third: #9D9D9D;
+
+    --font-family-secondary: "Jost", sans-serif;
+
+}
+
 body {
     font-size: 16px;
     font-family: "Exo", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 a {
@@ -24,4 +38,16 @@ select {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
 }

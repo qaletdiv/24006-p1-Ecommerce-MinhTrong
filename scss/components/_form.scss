@@ -16,7 +16,7 @@
         }
     }
 
-    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+    &__group:has(:inva):has(&__input:not(:placeholder-shown)) {
         .form__text-input {
             border-color: #ff0000;
         }
@@ -43,7 +43,6 @@
     &__input {
         flex: 1;
         height: 100%;
-
 
         font-size: 18px;
         font-weight: 500;

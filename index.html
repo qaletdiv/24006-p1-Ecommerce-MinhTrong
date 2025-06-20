@@ -28,17 +28,648 @@
 </head>
 
 <body>
+
     <header id="header" class="header"></header>
     <script>
         load("#header", "./template/header.html")
     </script>
 
-    <h1>Home page</h1>
+    <!-- MAIN -->
+    <main class="home">
+        <section class="home__container">
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero__heading">Build Skills with <br> Online Course</h1>
+                    <p class="hero__desc">
+                        We denounce with righteous indignation and dislike men who are <br> so beguiled and demoralized
+                        that
+                        cannot
+                        trouble.
+                    </p>
+                    <button class="hero__btn btn">Posts comment</button>
+                </div>
+            </section>
+        </section>
 
-    <header id="footer"></header>
-    <script>
-        load("#footer", "./template/footer.html")
-    </script>
+        <!-- Categories -->
+        <section class="home__container">
+            <div class="container">
+                <div class="home__heading">
+                    <h2 class="home__heading-title">Top Categories</h2>
+                    <button class="btn home__heading-btn">All Categories</button>
+                </div>
+
+                <div class="row row-cols-5 gy-3">
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/communicate-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Communication</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/communicate-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Communication</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/video-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Videography</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/photography-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Photography</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/marketing-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Marketing</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/content-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Content Writing</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/finance-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Finance</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/science-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Science</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/art-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Art & Design</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="cate__item">
+                            <img src="./assets/img/categories/art-icon.svg" alt="" class="cate__item-icon">
+                            <h3 class="cate__item-title">Network</h3>
+                            <p class="cate__item-desc">38 Courses</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Courses -->
+        <section class="home__container">
+            <div class="container">
+                <div class="home__heading">
+                    <h2 class="home__heading-title">Top Categories</h2>
+                    <button class="btn home__heading-btn">All Categories</button>
+                </div>
+
+                <div class="row row-cols-3 gy-3">
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-1.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-2.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free sale">$49.0</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-3.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-4.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-5.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-6.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner -->
+        <section class="home__container">
+            <div class="container">
+                <div class="banner">
+                    <div class="banner__info">
+                        <span>GET MORE POWER FROM</span>
+                        <h2>LearnPress Add-Ons</h2>
+                        <p>The next level of LearnPress - LMS WordPress Plugin. More Powerful, Flexible and Magical
+                            Inside.
+                        </p>
+                        <button class="btn banner__info-btn">Explorer course</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="home__container">
+            <div class="container">
+                <div class="row row-cols-4 gy-3">
+                    <div class="col">
+                        <article class="stats__item">
+                            <h3>25K+</h3>
+                            <p>Active Students</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="stats__item">
+                            <h3>25K+</h3>
+                            <p>Active Students</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="stats__item">
+                            <h3>25K+</h3>
+                            <p>Active Students</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="stats__item">
+                            <h3>25K+</h3>
+                            <p>Active Students</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion -->
+        <section class="home__container">
+            <div class="container">
+                <div class="promotion">
+                    <img src="./assets/img/banner/promotion-banner.svg" alt="" class="promotion__img">
+                    <div class="promotion__info">
+                        <h2 class="promotion__info-heading">
+                            Grow us your skill
+                            <br>
+                            with LearnPress LMS
+                        </h2>
+
+                        <p class="promotion__info-desc">
+                            We denounce with righteous indignation and dislike men who are <br> so beguiled and
+                            demoralized
+                            that cannot trouble.
+                        </p>
+
+                        <div class="promotion__info-skill">
+                            <img src="./assets/img/banner/checked.svg" alt="">
+                            <span>Certification</span>
+                        </div>
+
+                        <div class="promotion__info-skill">
+                            <img src="./assets/img/banner/checked.svg" alt="">
+                            <span>Certification</span>
+                        </div>
+
+                        <div class="promotion__info-skill">
+                            <img src="./assets/img/banner/checked.svg" alt="">
+                            <span>Certification</span>
+                        </div>
+
+                        <div class="promotion__info-skill">
+                            <img src="./assets/img/banner/checked.svg" alt="">
+                            <span>Certification</span>
+                        </div>
+
+                        <button class="btn banner__info-btn">Explorer course</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- banner -->
+        <section class="home__container">
+            <div class="container">
+                <div class="banner banner__2">
+                    <div class="banner__info">
+                        <span>PROVIDING AMAZING</span>
+                        <h2>Education Wordpress Theme</h2>
+                        <p>
+                            The next level of LMS WordPress Theme. Learn anytime and anywhere.
+                        </p>
+                        <button class="btn banner__info-btn btn__2">Explorer course</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- feedback -->
+        <section class="home__container">
+            <div class="container">
+
+                <h2 class="heading">Student feedbacks</h2>
+                <p class="title">What Students Say About Academy LMS</p>
+
+                <div class="row row-cols-4 gy-3">
+                    <div class="col">
+                        <article class="feedback__item">
+                            <img src="./assets/icons/feedback.svg" alt="">
+                            <p class="feedback__item-desc">
+                                I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound
+                            </p>
+                            <h3>Roe Smith</h3>
+                            <p>Designer</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feedback__item">
+                            <img src="./assets/icons/feedback.svg" alt="">
+                            <p class="feedback__item-desc">
+                                I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound
+                            </p>
+                            <h3>Roe Smith</h3>
+                            <p>Designer</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feedback__item">
+                            <img src="./assets/icons/feedback.svg" alt="">
+                            <p class="feedback__item-desc">
+                                I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound
+                            </p>
+                            <h3>Roe Smith</h3>
+                            <p>Designer</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feedback__item">
+                            <img src="./assets/icons/feedback.svg" alt="">
+                            <p class="feedback__item-desc">
+                                I must explain to you how all this mistaken . Tdea of denouncing pleasure and praising
+                                pain was born and I will give you a complete account of the system and expound
+                            </p>
+                            <h3>Roe Smith</h3>
+                            <p>Designer</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="home__container">
+            <div class="container">
+                <article class="cta">
+                    <div class="cta__info">
+                        <div class="cta__info-img">
+                            <img src="./assets/icons/user.svg" alt="">
+                        </div>
+                        <p>Let’s Start With Academy LMS</p>
+                    </div>
+
+                    <div class="cta__btn">
+                        <button class="btn--outline cta__btn-outline">I’m a student</button>
+                        <button class="btn cta__btn-inner">Become an Instructor</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Feature Courses -->
+        <section class="home__container">
+            <div class="container">
+                <div class="home__heading">
+                    <h2 class="home__heading-title">Latest articles</h2>
+                    <button class="btn home__heading-btn">All Categories</button>
+                </div>
+
+                <div class="row row-cols-3 gy-3">
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-7.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-8.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free sale">$49.0</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="feature__item">
+                            <img src="./assets/img/feature/feature-item-9.png" alt="" class="feature__item-img">
+
+                            <div class="feature__item-info">
+                                <p>by <strong>Determined-Poitras</strong></p>
+                                <h3 class="feature__item-info__title">Create an LMS Website with LearnPress</h3>
+
+                                <div class="feature__item-info__plan">
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
+                                        <span>2Weeks</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
+                                        <span>156 students</span>
+                                    </div>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div class="feature__item-info__meta">
+                                    <div class="feature__item-info__meta-price">
+                                        <span class="price">$29.0</span>
+                                        <span class="free">Free</span>
+                                    </div>
+
+                                    <a class="feature__item-info__meta-link" href="#">View more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="container">
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html")
+        </script>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+.hero {
+    max-height: 700px;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+
+    background-image: url(../../assets/img/hero/hero-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__heading {
+        color: var(--text-color);
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+    &__desc {
+        margin: 24px 0;
+        font-family: var(--font-family-secondary);
+        color: var(--text-color-secondary);
+        line-height: 1.5;
+    }
+
+    &__btn {
+        width: 170px;
+        font-size: 16px;
+        font-family: var(--font-family-secondary);
+        color: #fff;
+        background-color: var(--primary-color);
+        border-radius: 40px;
+    }
+}

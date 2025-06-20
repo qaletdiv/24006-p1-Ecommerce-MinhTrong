@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 
 $grid-breakpoints: (
     xxl: 1400px,
@@ -8,11 +9,11 @@ $grid-breakpoints: (
     sm: 576px,
 );
 $container-max-widths: (
-    sm: 100%,
-    md: 540px,
-    lg: 720px,
-    xl: 960px,
-    xxl: 1140px,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1370px,
 );
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
@@ -34,7 +35,7 @@ $gutters: (
     --grid-gutter-x: #{$grid-gutter-width};
     --grid-gutter-y: 0;
 
-    width: 1370px;
+    width: 100%px;
     margin-left: auto;
     margin-right: auto;
     @extend %gutter-padding;
@@ -118,7 +119,7 @@ $gutters: (
 @include make-gutters();
 
 @each $breakpoint, $dimension in $grid-breakpoints {
-    $max-width: map-get($container-max-widths, $breakpoint);
+    $max-width: map.get($container-max-widths, $breakpoint);
     $infix: "-#{$breakpoint}";
 
     @include make-media-query($dimension) {

@@ -1551,6 +1551,66 @@ select {
   border-radius: 40px;
 }
 
+.feature__item {
+  border: 1px solid #e1e1e1;
+  border-radius: 25px;
+  font-family: var(--font-family-secondary);
+  color: var(--text-color-secondary);
+}
+.feature__item-img {
+  width: 100%;
+}
+.feature__item-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.feature__item-info strong {
+  font-weight: 500;
+}
+.feature__item-info__title {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.feature__item-info__plan {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.feature__item-info__plan-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.feature__item-info .line {
+  width: 100%;
+  height: 2px;
+  background-color: #EAEAEA;
+}
+.feature__item-info__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.feature__item-info__meta .price {
+  color: var(--font-family-third);
+  text-decoration: line-through;
+  font-weight: 400;
+  margin-right: 6px;
+}
+.feature__item-info__meta .free {
+  color: #55BE24;
+  font-weight: 500;
+}
+.feature__item-info__meta .sale {
+  color: #F51A1A;
+}
+.feature__item-info__meta-link {
+  font-weight: 500;
+}
+
 .top-actions__btn, .top-actions__user, .top-actions, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -1850,66 +1910,6 @@ select {
 }
 .cate__item-desc {
   color: var(--text-color-secondary);
-}
-
-.feature__item {
-  border: 1px solid #e1e1e1;
-  border-radius: 25px;
-  font-family: var(--font-family-secondary);
-  color: var(--text-color-secondary);
-}
-.feature__item-img {
-  width: 100%;
-}
-.feature__item-info {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.feature__item-info strong {
-  font-weight: 500;
-}
-.feature__item-info__title {
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 500;
-}
-.feature__item-info__plan {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.feature__item-info__plan-time {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.feature__item-info .line {
-  width: 100%;
-  height: 2px;
-  background-color: #EAEAEA;
-}
-.feature__item-info__meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-}
-.feature__item-info__meta .price {
-  color: var(--font-family-third);
-  text-decoration: line-through;
-  font-weight: 400;
-  margin-right: 6px;
-}
-.feature__item-info__meta .free {
-  color: #55BE24;
-  font-weight: 500;
-}
-.feature__item-info__meta .sale {
-  color: #F51A1A;
-}
-.feature__item-info__meta-link {
-  font-weight: 500;
 }
 
 .banner {

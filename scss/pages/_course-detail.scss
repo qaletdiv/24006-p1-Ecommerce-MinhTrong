@@ -99,7 +99,6 @@
 
 .course__tab:last-child {
     border-right: none;
-
 }
 
 /* Hover */
@@ -127,7 +126,96 @@
     p:first-child {
         margin-bottom: 30px;
     }
+
+    &-cta {
+        padding: 16px 20px;
+        background-color: #fff;
+        margin-bottom: 12px;
+        border-radius: 10px;
+
+        &__box {
+            display: flex;
+
+            &-heading {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &-time {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-left: auto;
+            }
+        }
+
+        &__lessons {
+            display: flex;
+            margin-top: 16px;
+            padding-left: 20px;
+
+            &-heading {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &-time {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                margin-left: auto;
+            }
+
+            &-btn {
+                padding: 4px 12px;
+                border-radius: 8px;
+                background-color: #2580D5;
+                color: #fff;
+                font-weight: 300;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-instructor {
+        &__info {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+
+            &-heading {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            &-desc {
+                margin: 12px 0;
+                color: #555555;
+            }
+
+            &-class {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+        }
+
+        &__content {
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        &__social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
 }
+
 
 .course__overview-cta {
     max-width: 850px;

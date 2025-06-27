@@ -56,4 +56,9 @@
         text-decoration: none;
         color: #9D9D9D;
     }
+
+    &-link {
+        font-weight: 600;
+        font-family: var(--font-family-secondary);
+    }
 }

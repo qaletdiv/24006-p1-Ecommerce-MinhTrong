@@ -63,7 +63,7 @@ input::placeholder {
 }
 
 .price {
-    color: var(--font-family-third);
+    color: #9D9D9D;
     text-decoration: line-through;
     font-weight: 400;
     margin-right: 6px;
@@ -71,9 +71,11 @@ input::placeholder {
 
 .free {
     color: #55BE24;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .sale {
     color: #F51A1A;
+    font-weight: 600;
+    font-size: 20px;
 }

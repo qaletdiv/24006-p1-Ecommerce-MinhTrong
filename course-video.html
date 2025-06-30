@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Video || EduPress</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./template/header.html")
+    </script>
+
+    <!-- MAIN -->
+    <main class="video">
+        <div class="container">
+            <div class="video__box">
+                <video width="100%" height="100%" controls controlsList="nodownload" class="video__box-container"
+                    poster="./assets/img/thumnails/thumnails-2.png">
+                    <source src="./assets/video/HTML CSS là gì_ _ Ví dụ trực quan về HTML & CSS.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <h2 class="video__heading">
+                Vai trò của HTML, CSS, Javascript
+            </h2>
+            <article class="video__content">
+                <h3 class="video__content-heading"># HTML, CSS, JavaScript</h3>
+                <p class="video__content-desc">
+                    HTML (HyperText Markup Language - Ngôn ngữ đánh dấu siêu văn bản), CSS (Cascading Style Sheets - Các
+                    tập tin định kiểu theo tầng) và JavaScript là 3 ngôn ngữ để phát triển web mà trình duyệt có thể
+                    hiểu. Chúng là các ngôn ngữ khác nhau nhưng có quan hệ mật thiết với nhau, mỗi ngôn ngữ được thiết
+                    kế cho những nhiệm vụ cụ thể. Việc hiểu rõ được cách chúng làm việc với nhau sẽ giúp bạn sớm trở
+                    thành một nhà phát triển web chuyên nghiệp.
+                </p>
+
+                <p class="video__content-desc">
+                    Trước tiên, bạn cần nắm được:
+                </p>
+
+                <ul>
+                    <li>
+                        HTML dùng để thêm ý nghĩa cho nội dung bằng cách đánh dấu nó
+                    </li>
+                    <li>
+                        CSS dùng để định dạng cho nội dung đã được đánh dấu bởi HTML
+
+                    </li>
+                    <li>
+                        JavaScript dùng để thêm chức năng giúp người dùng có thể tương tác nhiều hơn với trang web
+                    </li>
+
+                    <p class="video__content-desc">
+                        Hãy tưởng tượng HTML là phần khung xương của một trang web, CSS là những gì bạn nhìn thấy trên
+                        trang web và JavaScript là các hành vi có thể thao tác trên trang web.
+                    </p>
+
+                    <img src="./assets/img/banner/web_development-768x576.jpg" alt="">
+
+                    <p class="video__content-desc">
+                        HTML là phần cấu trúc, CSS hoàn thiện về thẩm mỹ, JavaScript làm tính năng tương tác.
+                    </p>
+
+                    <pre class="video__content-code">
+                        <code class="language-html">&lt;p id="paragraph"&gt;Hôm nay là một ngày đẹp trời!&lt;/p&gt;</code>
+                      </pre>
+
+
+                    <p class="video__content-desc">
+                        Sau đó, bạn có thể đặt kích thước và màu sắc cho đoạn văn bản với CSS sau:
+                    </p>
+
+                    <pre class="video__content-code"><code class="language-css">#paragraph &#123;
+    font-size: 18px;
+    color: red;
+&#125;</code></pre>
+                    </pre>
+
+                    <p class="video__content-desc">
+                        Cuối cùng, nếu bạn muốn nhấn vào đoạn văn bản thì nội dung của nó sẽ thay đổi, thêm code
+                        JavaScript sau:
+                    </p>
+
+                    <pre class="video__content-code"><code class="language-js">const p = document.getElementById('paragraph');
+p.onclick = function() {
+    this.innerText = 'Bạn đã CLICK vào đoạn văn bản!';
+};</code></pre>
+
+                </ul>
+
+                <div class="video__content-summary">
+                    <h3 class="video__content-summary__heading">
+                        Tóm Tẳt
+                    </h3>
+                    <ul>
+                        <li>
+                            HTML, CSS và JavaScript là 3 ngôn ngữ duy nhất mà trình duyệt có thể hiểu
+                        </li>
+                        <li>
+                            HTML viết tắt của HyperText Markup Language, nghĩa là Ngôn ngữ đánh dấu siêu văn bản
+                        </li>
+                        <li>
+                            CSS viết tắt của Cascading Style Sheets, nghĩa là Các tập tin định kiểu theo tầng
+
+                        </li>
+                        <li>
+                            JavaScript là một ngôn ngữ lập trình, giúp thêm tính tương tác cho trang web
+                        </li>
+                        <li>
+                            Ví HTML như phần khung của một ngôi nhà, thì CSS đóng vai trò trang trí cho ngôi nhà trở nên
+                            đẹp mắt, và JavaScript giúp ngôi nhà có nhiều tiện nghi hiện đại hơn.
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script>
+        load("#footer", "./template/footer.html")
+    </script>
+</body>
+
+</html>

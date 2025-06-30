@@ -178,6 +178,10 @@ input::placeholder {
   font-size: 16px;
 }
 
+.header {
+  background-color: #EAEAEA;
+}
+
 .heading {
   text-align: center;
   font-size: 32px;
@@ -2533,6 +2537,62 @@ input::placeholder {
 
 .course__item-info__price-item-price {
   color: #ff6a00;
+}
+
+.video {
+  padding: 20px 0;
+}
+.video__heading {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.video__content {
+  width: 685px;
+  margin: 0 auto;
+  font-family: var(--font-family-secondary);
+  line-height: 1.5;
+}
+.video__content-heading {
+  font-weight: 600;
+  font-size: 20px;
+}
+.video__content-desc {
+  margin: 15px 0;
+}
+.video__content ul li {
+  list-style: circle;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.video__content-code {
+  padding: 16px;
+  color: #f8f8f2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background-color: #262626;
+  border-radius: 8px;
+}
+.video__content-code code {
+  display: block;
+  white-space: pre;
+  margin: 0;
+  padding: 0;
+}
+.video__content-code pre,
+.video__content-code code {
+  text-align: left;
+}
+.video__content-summary {
+  padding: 10px 28px 10px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  margin-top: 20px;
+}
+.video__content-summary__heading {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 html {

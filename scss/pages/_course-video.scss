@@ -1,0 +1,67 @@
+.video {
+    padding: 20px 0;
+
+    &__heading {
+        font-weight: 600;
+        font-size: 24px;
+        margin: 20px 0;
+    }
+}
+
+.video__content {
+    width: calc(1370px / 2);
+    margin: 0 auto;
+    font-family: var(--font-family-secondary);
+    line-height: 1.5;
+
+    &-heading {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &-desc {
+        margin: 15px 0;
+    }
+
+    ul {
+        li {
+            list-style: circle;
+            margin-left: 40px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-code {
+        padding: 16px;
+        color: #f8f8f2;
+        text-shadow: 0 1px rgba(0, 0, 0, .3);
+        background-color: #262626;
+        border-radius: 8px;
+
+        code {
+            display: block;
+            white-space: pre;
+            margin: 0;
+            padding: 0;
+        }
+
+        // Loại bỏ thụt trái do xuống dòng trong HTML
+        pre,
+        code {
+            text-align: left;
+        }
+    }
+
+    &-summary {
+        padding: 10px 28px 10px 20px;
+        border-radius: 10px;
+        border: 2px solid var(--primary-color);
+        margin-top: 20px;
+
+        &__heading {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}

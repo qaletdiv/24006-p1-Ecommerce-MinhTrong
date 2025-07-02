@@ -7,6 +7,8 @@
 
 :root {
     --primary-color: #FF782D;
+    --third-color: #4a89dc;
+    --fourth-color: #3bafda;
     --bg-color: #FFFFFF;
     --bg-color-secondary: #F5F5F5;
 
@@ -15,6 +17,16 @@
     --text-color-third: #9D9D9D;
 
     --font-family-secondary: "Jost", sans-serif;
+
+
+    --success-color: #48cfad;
+    --danger-color: #ed5565;
+    --light-color: #f8f9fa;
+
+    --fiveth-color: #4a6bff;
+    --light-gray: #ecf0f1;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 body {

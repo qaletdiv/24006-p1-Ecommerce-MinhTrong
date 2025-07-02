@@ -1,0 +1,203 @@
+.quiz {
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--third-color); // assuming this = primary-color
+    }
+
+    &__timer {
+        display: flex;
+        align-items: center;
+        background-color: #ffecec;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        color: var(--danger-color);
+        font-weight: 600;
+
+        &-icon {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__progress {
+        height: 8px;
+        background-color: #e9ecef;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+
+        &-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+    }
+
+    &__content {
+        position: relative;
+        min-height: 300px;
+    }
+
+    &__question {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__options {
+        margin-bottom: 2rem;
+    }
+
+    &__option {
+        display: block;
+        position: relative;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: var(--primary-color);
+        }
+
+        &-input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        &-checkmark {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 2px solid #adb5bd;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                top: 2px;
+                left: 2px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: white;
+            }
+        }
+
+        &-input:checked~&-checkmark {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    &__button {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &--prev {
+            background-color: #f1f3f5;
+            color: var(--text-color);
+
+            &:hover:not(:disabled) {
+                background-color: #e9ecef;
+            }
+        }
+
+        &--next {
+            background-color: var(--primary-color);
+            color: white;
+
+            &:hover {
+                background-color: #3a7bd5;
+            }
+        }
+
+        &--submit {
+            background-color: var(--success-color);
+            color: white;
+
+            &:hover {
+                background-color: #3dbb9b;
+            }
+        }
+    }
+
+    &__counter {
+        text-align: center;
+        color: #868e96;
+        margin-top: 1rem;
+    }
+
+    // Responsive
+    @media (max-width: 768px) {
+        padding: 1.5rem;
+
+        &__title {
+            font-size: 1.3rem;
+        }
+
+        &__question {
+            font-size: 1.1rem;
+        }
+
+        &__option {
+            padding: 0.8rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 1rem;
+
+        &__header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__timer {
+            margin-top: 0.5rem;
+        }
+    }
+}

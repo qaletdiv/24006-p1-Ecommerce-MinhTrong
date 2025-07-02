@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ PAGE || EduPress</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./template/header.html")
+    </script>
+
+    <!-- MAIN -->
+    <main class="quiz">
+        <div class="quiz__header">
+            <h2 class="quiz__title">Bài kiểm tra Module 1</h2>
+            <div class="quiz__timer">
+                <i class="quiz__timer-icon">⏱️</i>
+                <span class="quiz__timer-display" id="time">30:00</span>
+            </div>
+        </div>
+
+        <div class="quiz__progress">
+            <div class="quiz__progress-bar" id="progress-bar" style="width: 20%"></div>
+        </div>
+
+        <div class="quiz__content">
+            <div class="quiz__question">1. Trong các khái niệm sau, khái niệm nào đúng về mạng máy tính?</div>
+
+            <div class="quiz__options">
+                <label class="quiz__option">
+                    Mạng máy tính là hệ thống các máy tính kết nối Internet
+                    <input class="quiz__option-input" type="radio" name="answer" checked>
+                    <span class="quiz__option-checkmark"></span>
+                </label>
+
+                <label class="quiz__option">
+                    Mạng máy tính là hệ thống các máy tính được kết nối với nhau để chia sẻ tài nguyên
+                    <input type="radio" name="answer">
+                    <span class="quiz__option-checkmark"></span>
+                </label>
+
+                <label class="quiz__option">
+                    Mạng máy tính là bất kỳ thiết bị nào có thể kết nối WiFi
+                    <input type="radio" name="answer">
+                    <span class="quiz__option-checkmark"></span>
+                </label>
+
+                <label class="option">
+                    Mạng máy tính chỉ bao gồm các máy tính trong cùng một tòa nhà
+                    <input type="radio" name="answer">
+                    <span class="quiz__option-checkmark"></span>
+                </label>
+            </div>
+
+            <div class="quiz__controls">
+                <button class="quiz__button quiz__button--prev" disabled>Trước</button>
+                <button class="quiz__button quiz__button--next">Tiếp theo</button>
+            </div>
+
+            <div class="quiz__counter">Câu 1 / 5</div>
+        </div>
+
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script>
+        load("#footer", "./template/footer.html")
+    </script>
+</body>
+
+</html>

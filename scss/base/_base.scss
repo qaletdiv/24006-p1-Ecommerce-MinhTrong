@@ -8,6 +8,7 @@
 :root {
     --primary-color: #FF782D;
     --third-color: #4a89dc;
+    --secondary-color: #10b981;
     --fourth-color: #3bafda;
     --bg-color: #FFFFFF;
     --bg-color-secondary: #F5F5F5;
@@ -54,10 +55,6 @@ select {
 
 input::placeholder {
     font-size: 16px;
-}
-
-.header {
-    background-color: #EAEAEA;
 }
 
 .heading {

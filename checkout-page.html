@@ -33,7 +33,7 @@
         load("#header", "./template/header.html")
     </script>
 
-    <main class="checkout">
+    <main class="checkout container">
         <div class="checkout__header">
             <h1 class="checkout__header-title">Thanh toán khóa học</h1>
             <div class="checkout__header-steps">
@@ -41,14 +41,6 @@
                     <div class="checkout__header-steps-item-number checkout__header-steps-item-number--active">1</div>
                     <div class="checkout__header-steps-item-label checkout__header-steps-item-label--active">Thông tin
                         thanh toán</div>
-                </div>
-                <div class="checkout__header-steps-item">
-                    <div class="checkout__header-steps-item-number">2</div>
-                    <div class="checkout__header-steps-item-label">Xác nhận</div>
-                </div>
-                <div class="checkout__header-steps-item">
-                    <div class="checkout__header-steps-item-number">3</div>
-                    <div class="checkout__header-steps-item-label">Hoàn tất</div>
                 </div>
             </div>
         </div>
@@ -64,28 +56,19 @@
                 </h2>
                 <div class="checkout__main-section-list">
                     <div class="checkout__main-section-list-item checkout__main-section-list-item--selected">
-                        <img src="https://placehold.co/40x25" alt="Credit card payment method">
+                        <img src="./assets/img/checkout/credit-card.png" alt="Credit card payment method">
                         <div class="checkout__main-section-list-item-label">Thẻ tín dụng/ghi nợ</div>
-                        <svg class="checkout__main-section-list-item-icon checkout__main-section-list-item-icon--visible"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
+                        <img src="./assets/icons/check-icon.svg" alt="">
                     </div>
                     <div class="checkout__main-section-list-item">
-                        <img src="https://placehold.co/40x25" alt="Bank transfer payment method">
+                        <img src="./assets/img/checkout/payment.png" alt="Bank transfer payment method">
                         <div class="checkout__main-section-list-item-label">Chuyển khoản ngân hàng</div>
-                        <svg class="checkout__main-section-list-item-icon" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
+                        <img src="./assets/icons/check-icon.svg" alt="">
                     </div>
                     <div class="checkout__main-section-list-item">
-                        <img src="https://placehold.co/40x25" alt="Momo e-wallet payment method">
+                        <img src="./assets/img/checkout/momo.png    " alt="Momo e-wallet payment method">
                         <div class="checkout__main-section-list-item-label">Ví điện tử Momo</div>
-                        <svg class="checkout__main-section-list-item-icon" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
+                        <img src="./assets/icons/check-icon.svg" alt="">
                     </div>
                 </div>
             </section>
@@ -156,7 +139,8 @@
 
                 <div class="checkout__sidebar-summary-course">
                     <div class="checkout__sidebar-summary-course-image">
-                        <img src="https://placehold.co/80x60" alt="Course thumbnail for React Advanced Course">
+                        <img src="./assets/img/course/course-item-2.png"
+                            alt="Course thumbnail for React Advanced Course">
                     </div>
                     <div class="checkout__sidebar-summary-course-info">
                         <div class="checkout__sidebar-summary-course-info-name">React Advanced - Xây dựng ứng dụng

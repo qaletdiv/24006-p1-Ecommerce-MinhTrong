@@ -28,17 +28,43 @@
 
     &__list {
         @extend %flexItemsCenter;
-        gap: 20px;
+        gap: 70px;
     }
 
     &__link {
+        position: relative;
         @extend %flexItemsCenter;
         gap: 6px;
         font-weight: 700;
+        transition: color 0.3s ease-in-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease-in-out;
+        }
+
+        &:hover {
+            color: var(--primary-color);
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &:hover img {
+            filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(1216%) hue-rotate(340deg) brightness(102%) contrast(101%);
+        }
     }
 
     &__arrow {
         margin-top: 3px;
+        transition: filter 0.3s ease;
     }
 }
 
@@ -54,12 +80,20 @@
         a,
         span {
             font-family: "Jost", sans-serif;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         &-btn {
             padding: 14px 34px;
             border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
+
     }
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./template/header.html")
+    </script>
+
+    <section class="profile">
+        <div class="container">
+            <div class="profile__header">
+                <div class="profile__header-box">
+                    <div class="profile__avatar">
+                        <img src="./assets/img/avatar/avatar.jpg" alt="avatar" />
+                    </div>
+                    <div class="profile__details">
+                        <h1 class="profile__name">Nguyễn Văn A</h1>
+                        <p class="profile__email">nguyenvana@example.com</p>
+                        <button class="btn btn--primary">Cập nhật hồ sơ</button>
+                    </div>
+                </div>
+                <div class="profile__info">
+                    <div class="profile__info-item">
+                        <span class="profile__info-label">Khóa học</span>
+                        <span class="profile__info-value">15</span>
+                    </div>
+                    <div class="profile__info-item">
+                        <span class="profile__info-label">Hoàn thành</span>
+                        <span class="profile__info-value">8</span>
+                        </span>
+                        <div class="profile__info-item">
+                            <span class="profile__info-label">Điểm số</span>
+                            <span class="profile__info-value">9.5</span>
+                        </div>
+                        <div class="profile__info-item">
+                            <span class="profile__info-label">Thời gian học</span>
+                            <span class="profile__info-value">120h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section class="courses">
+        <div class="container">
+            <h2 class="heading">Khóa học của tôi</h2>
+            <div class="courses__list">
+                <!-- Course Item 1 -->
+                <div class="courses__card">
+                    <div class="courses__image">
+                        <img src="./assets/img/course/course-item-1.png"
+                            alt="Khóa học lập trình web với HTML, CSS, JavaScript hiển thị trên màn hình máy tính" />
+                    </div>
+                    <div class="courses__content">
+                        <h3 class="courses__title">Lập trình Web cơ bản</h3>
+                        <p class="courses__instructor">Giảng viên: Trần Thị B</p>
+                        <div class="courses__progress">
+                            <div class="courses__progress-bar" style="width: 65%"></div>
+                        </div>
+                        <div class="courses__meta">
+                            <span class="courses__progress-text">65% hoàn thành</span>
+                            <span class="courses__status">Đang học</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Item 2 -->
+                <div class="courses__card">
+                    <div class="courses__image">
+                        <img src="./assets/img/course/course-item-2.png"
+                            alt="React JS ứng dụng thương mại điện tử với nhiều component UI" />
+                    </div>
+                    <div class="courses__content">
+                        <h3 class="courses__title">React JS nâng cao</h3>
+                        <p class="courses__instructor">Giảng viên: Lê Văn C</p>
+                        <div class="courses__progress">
+                            <div class="courses__progress-bar" style="width: 30%"></div>
+                        </div>
+                        <div class="courses__meta">
+                            <span class="courses__progress-text">30% hoàn thành</span>
+                            <span class="courses__status">Đang học</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Item 3 -->
+                <div class="courses__card">
+                    <div class="courses__image">
+                        <img src="./assets/img/course/course-item-3.png"
+                            alt="Node.js REST API với MongoDB trên nền tảng đám mây" />
+                    </div>
+                    <div class="courses__content">
+                        <h3 class="courses__title">Node.js Backend</h3>
+                        <p class="courses__instructor">Giảng viên: Phạm Thị D</p>
+                        <div class="courses__progress">
+                            <div class="courses__progress-bar" style="width: 100%"></div>
+                        </div>
+                        <div class="courses__meta">
+                            <span class="courses__progress-text">100% hoàn thành</span>
+                            <span class="courses__status">Hoàn thành</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+    <script>
+        load("#footer", "./template/footer.html")
+    </script>
+
+    <script>
+        // JavaScript để xử lý tương tác người dùng
+        document.addEventListener('DOMContentLoaded', function () {
+            // Có thể thêm các sự kiện tương tác ở đây
+            console.log('Trang profile đã sẵn sàng');
+
+            // Ví dụ: Thêm sự kiện click cho nút cập nhật profile
+            const updateBtn = document.querySelector('.btn--primary');
+            if (updateBtn) {
+                updateBtn.addEventListener('click', function () {
+                    alert('Tính năng cập nhật hồ sơ sẽ được mở ra!');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

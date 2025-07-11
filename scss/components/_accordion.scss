@@ -1,0 +1,115 @@
+.transition {
+    transition: all 0.25s ease-in-out;
+}
+
+.flipIn {
+    animation: flipdown 0.5s ease both;
+}
+
+.accordion {
+    &__item {
+        background-color: #fff;
+        margin-bottom: 12px;
+        padding: 0 20px;
+        @extend .flipIn;
+        position: relative;
+        border: 1px solid #ddd;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:not(:checked)~.accordion__item-course {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: all 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked~.accordion__item-course {
+        max-height: 500px;
+        opacity: 1;
+        transition: all 0.3s ease;
+        padding: 20px 0;
+    }
+
+    &__item-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    &__item-menu__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__item-menu__info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    &__item-menu__arrow {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        display: inline-block;
+        margin-right: 6px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-right: 2px solid #333;
+            border-bottom: 2px solid #333;
+            transform: rotate(45deg); // Mũi tên ↓
+            transition: transform 0.3s ease;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    // 🔁 Khi checkbox được check thì quay mũi tên ↑
+    input[type="checkbox"]:checked~.accordion__item-menu .accordion__item-menu__arrow::before {
+        transform: rotate(-135deg); // Mũi tên ↑
+    }
+
+    &__item-course {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    &__item-course__title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-left: 30px;
+    }
+
+    &__item-course__info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &-btn {
+            padding: 4px 12px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff;
+            background-color: #2580D5;
+            border-radius: 8px;
+        }
+    }
+}

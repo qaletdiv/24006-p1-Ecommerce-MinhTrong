@@ -148,3 +148,62 @@
 .course__item-info__price-item-price {
     color: #ff6a00;
 }
+
+.course__instructor {
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        &__details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            h3 {
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            p {
+                line-height: 1.5;
+                color: #555555;
+            }
+
+            &-stats {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+
+    &-desc {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #555555;
+        line-height: 1.5;
+    }
+
+    &-socials {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        p {
+            letter-spacing: 1.2;
+        }
+
+        &__icon {
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(1216%) hue-rotate(340deg) brightness(102%) contrast(101%);
+                transition: filter 0.3s ease;
+                border-radius: 50px;
+            }
+        }
+
+    }
+}

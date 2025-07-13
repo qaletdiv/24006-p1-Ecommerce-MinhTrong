@@ -55,31 +55,31 @@
             <div class="quiz__options">
                 <label class="quiz__option">
                     Mạng máy tính là hệ thống các máy tính kết nối Internet
-                    <input class="quiz__option-input" type="radio" name="answer" checked>
+                    <input class="quiz__option-input" type="radio" name="answer">
                     <span class="quiz__option-checkmark"></span>
                 </label>
 
                 <label class="quiz__option">
                     Mạng máy tính là hệ thống các máy tính được kết nối với nhau để chia sẻ tài nguyên
-                    <input type="radio" name="answer">
+                    <input class="quiz__option-input" type="radio" name="answer">
                     <span class="quiz__option-checkmark"></span>
                 </label>
 
                 <label class="quiz__option">
                     Mạng máy tính là bất kỳ thiết bị nào có thể kết nối WiFi
-                    <input type="radio" name="answer">
+                    <input class="quiz__option-input" type="radio" name="answer">
                     <span class="quiz__option-checkmark"></span>
                 </label>
 
-                <label class="option">
+                <label class="quiz__option">
                     Mạng máy tính chỉ bao gồm các máy tính trong cùng một tòa nhà
-                    <input type="radio" name="answer">
+                    <input class="quiz__option-input" type="radio" name="answer">
                     <span class="quiz__option-checkmark"></span>
                 </label>
             </div>
 
             <div class="quiz__controls">
-                <button class="quiz__button quiz__button--prev" disabled>Trước</button>
+                <button type="button" class="quiz__button quiz__button--prev " disabled>Trước</button>
                 <button class="quiz__button quiz__button--next">Tiếp theo</button>
             </div>
 
@@ -89,10 +89,11 @@
     </main>
 
     <footer id="footer"></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script>
         load("#footer", "./template/footer.html")
     </script>
+
+    <script src="./assets/js/quiz/quiz-script.js"></script>
 </body>
 
 </html>

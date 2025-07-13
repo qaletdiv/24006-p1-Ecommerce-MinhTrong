@@ -2318,6 +2318,7 @@ input::placeholder {
 }
 .banner__info p {
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .banner__info-btn {
@@ -2511,9 +2512,6 @@ input::placeholder {
 }
 .course__left-filter__input-field {
   min-width: 270px;
-}
-.course__left-filter__icon {
-  padding-bottom: 6px;
 }
 
 .course__left-cta {
@@ -2926,8 +2924,15 @@ input::placeholder {
   background-color: #f1f3f5;
   color: var(--text-color);
 }
-.quiz__button--prev:hover:not(:disabled) {
-  background-color: #e9ecef;
+.quiz__button--prev:hover:not([disabled]) {
+  background-color: #3a7bd5;
+}
+.quiz__button--active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.quiz__button--active:hover {
+  background-color: #3a7bd5;
 }
 .quiz__button--next {
   background-color: var(--primary-color);

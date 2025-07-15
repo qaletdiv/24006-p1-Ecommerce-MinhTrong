@@ -2510,6 +2510,12 @@ input::placeholder {
   border-bottom: 1px solid #333;
   padding-bottom: 4px;
 }
+.course__left-filter__input-btn {
+  border: none;
+  background-color: transparent;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
 .course__left-filter__input-field {
   min-width: 270px;
 }

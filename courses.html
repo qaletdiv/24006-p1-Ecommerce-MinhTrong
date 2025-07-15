@@ -7,11 +7,11 @@
     <title>Course Page || EduPress</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <!-- <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="/site.webmanifest" /> -->
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,9 +58,12 @@
                     <h2>All Course</h2>
                     <div class="course__left-filter">
                         <div class="course__left-filter__input">
-                            <input type="text" placeholder="Search for course" class="course__left-filter__input-field">
-                            <img src="./assets/icons/filter-search.svg" alt="filter-search"
-                                class="course__left-filter__input-icon">
+                            <input id="search" name="search" value="" type="text" placeholder="Search for course"
+                                class="course__left-filter__input-filed">
+                            <button class="course__left-filter__input-btn">
+                                <img src="./assets/icons/filter-search.svg" alt="filter-search"
+                                    class="course__left-filter__input-icon">
+                            </button>
                         </div>
                         <img src="./assets/icons/grid.svg" alt="grid" class="course__left-filter__icon">
                         <a href="./courses-list.html">
@@ -537,6 +540,9 @@
     <script>
         load("#footer", "./template/footer.html")
     </script>
+
+    <script src="./assets/js/InputSearch/search.js"></script>
+
 </body>
 
 </html>

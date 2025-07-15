@@ -1,7 +1,6 @@
 const timerElement = document.getElementById("time");
 const questionElement = document.querySelector(".quiz__question");
 const optionsContainer = document.querySelector(".quiz__options");
-const optionElements = document.querySelectorAll(".quiz__option");
 const prevButton = document.querySelector(".quiz__button--prev")
 const nextButton = document.querySelector(".quiz__button--next");
 const questionCounter = document.querySelector(".quiz__counter");
@@ -9,6 +8,7 @@ const progressBar = document.querySelector(".quiz__progress-bar");
 
 let timeInSeconds = 30 * 60;
 let currentQuestionIndex = 0;
+let selectedAnswered = {};
 
 const questions = [
     {
@@ -58,8 +58,6 @@ const questions = [
     },
 ]
 
-
-
 nextButton.addEventListener('click', () => {
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
@@ -77,7 +75,7 @@ const timerInterval = setInterval(() => {
     if (timeInSeconds <= 0) {
         clearInterval(timerInterval);
         alert("Thời gian đã hết! Bài kiểm tra sẽ tự động nộp.");
-        resetQuiz();
+        submitQuiz(); // Gọi hàm submitQuiz để nộp bài kiểm tra
     } else {
         const minutes = Math.floor(timeInSeconds / 60);
         const seconds = timeInSeconds % 60;
@@ -98,6 +96,30 @@ function resetQuiz() {
     optionsContainer.innerHTML = ''; // Xóa các lựa chọn cũ
 }
 
+optionsContainer.addEventListener('change', (event) => {
+    if (event.target.matches(`input[type="radio"]`)) {
+        selectedAnswered[currentQuestionIndex] = parseInt(event.target.value);
+    }
+})
+
+function submitQuiz() {
+    clearInterval(timerInterval);
+    let score = 0;
+
+    const optionElements = document.querySelectorAll(".quiz__option");
+    optionElements.forEach((option, index) => {
+        const selectOption = option.querySelector('input[type="radio"]:checked');
+
+        if (selectOption && parseInt(selectOption.value) === selectedAnswered[index]) {
+            score++;
+        }
+
+        alert(`Bạn đã hoàn thành bài học`)
+
+        window.location.href = "./index.html";
+    })
+}
+
 function showQuestion(index) {
     const currentQuestion = questions[index];
     questionElement.textContent = currentQuestion.question;
@@ -110,8 +132,17 @@ function showQuestion(index) {
             <input class="quiz__option-input" type="radio" name="answer" value="${i}">
             <span class="quiz__option-checkmark"></span>
         `;
+
+        const input = label.querySelector('input[type="radio"]');
+
+        if (selectedAnswered[index] === i) {
+            input.checked = true; // Đánh dấu lựa chọn đã chọn nếu có
+        }
+
+
         optionsContainer.appendChild(label);
     });
+
     questionCounter.textContent = `Câu ${index + 1} / ${questions.length}`;
     progressBar.style.width = `${((index + 1) / questions.length) * 100}%`;
 
@@ -127,12 +158,13 @@ function showQuestion(index) {
         nextButton.textContent = 'Kết thúc'; // Thay đổi nút "Tiếp theo" thành "Kết thúc"
         nextButton.addEventListener('click', () => {
             alert("Bài kiểm tra đã hoàn thành!");
-            resetQuiz(); // Gọi hàm resetQuiz để bắt đầu lại từ đầu
+            submitQuiz(); // Gọi hàm submitQuiz để nộp bài kiểm tra
         })
     } else {
         nextButton.textContent = 'Tiếp theo'; // Đặt lại nút "Tiếp theo"
     }
 }
-// Gọi hàm để hiển thị câu hỏi đầu tiên
+
+
 showQuestion(currentQuestionIndex);
 

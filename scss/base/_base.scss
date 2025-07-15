@@ -76,10 +76,16 @@ input::placeholder {
 }
 
 .price {
-    color: #9D9D9D;
-    text-decoration: line-through;
-    font-weight: 400;
+    color: #55BE24;
+    font-weight: 600;
     margin-right: 6px;
+}
+
+.price-line {
+    color: #9D9D9D;
+    font-weight: 400;
+    text-decoration: line-through;
+
 }
 
 .free {

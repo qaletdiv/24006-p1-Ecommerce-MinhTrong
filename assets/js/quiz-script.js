@@ -84,18 +84,6 @@ const timerInterval = setInterval(() => {
     }
 }, 1000)
 
-function resetQuiz() {
-    currentQuestionIndex = 0;
-    timeInSeconds = 30 * 60;
-    timerElement.textContent = "30:00";
-    showQuestion(currentQuestionIndex);
-    prevButton.disabled = true; // Vô hiệu hóa nút "Prev"
-    prevButton.classList.remove('quiz__button--active'); // Loại bỏ class làm nổi bật nút "Prev"
-    nextButton.textContent = 'Tiếp theo'; // Đặt lại nút "Tiếp theo"
-    progressBar.style.width = '0%'; // Đặt lại thanh tiến trình
-    optionsContainer.innerHTML = ''; // Xóa các lựa chọn cũ
-}
-
 optionsContainer.addEventListener('change', (event) => {
     if (event.target.matches(`input[type="radio"]`)) {
         selectedAnswered[currentQuestionIndex] = parseInt(event.target.value);

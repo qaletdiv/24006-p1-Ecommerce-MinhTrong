@@ -6,9 +6,15 @@
     flex-wrap: wrap
 }
 
+
 .top-bar {
     @extend %flexItemsCenter;
     padding: 25px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
     &__more {
         display: none;

@@ -1,3 +1,5 @@
+@use "../abstrasts";
+
 .footer {
     background: #EAEAEA;
     padding-top: 90px;
@@ -7,6 +9,14 @@
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 2fr;
         gap: 30px;
+
+        @include abstrasts.screen(lg) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include abstrasts.screen(sm) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__heading {
@@ -65,5 +75,6 @@
         text-align: center;
         color: var(--text-color-secondary);
         font-size: 14px;
+        line-height: 1.5;
     }
 }

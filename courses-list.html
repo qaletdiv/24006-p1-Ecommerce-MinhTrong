@@ -59,8 +59,10 @@
                     <div class="course__left-filter">
                         <div class="course__left-filter__input">
                             <input type="text" placeholder="Search for course" class="course__left-filter__input-field">
-                            <img src="./assets/icons/filter-search.svg" alt="filter-search"
-                                class="course__left-filter__input-icon">
+                            <button class="course__left-filter__input-btn">
+                                <img src="./assets/icons/filter-search.svg" alt="filter-search"
+                                    class="course__left-filter__input-icon">
+                            </button>
                         </div>
                         <a href="./courses.html">
                             <img src="./assets/icons/grid.svg" alt="grid" class="course__left-filter__icon">
@@ -71,7 +73,7 @@
 
                 <div class="row row-cols-1 gy-3 course__list">
                     <div class="col course__list-item">
-                        <img src="./assets/img/course-list/course-1.png" alt="" class="course__list-item__img">
+                        <img src="./assets/img/course/course-item-1.png" alt="" class="course__list-item__img">
 
                         <div class="course__item-info">
                             <p>
@@ -119,7 +121,7 @@
                     </div>
 
                     <div class="col course__list-item">
-                        <img src="./assets/img/course-list/course-2.png" alt="" class="course__list-item__img">
+                        <img src="./assets/img/course/course-item-2.png" alt="" class="course__list-item__img">
 
                         <div class="course__item-info">
                             <p>
@@ -167,7 +169,7 @@
                     </div>
 
                     <div class="col course__list-item">
-                        <img src="./assets/img/course-list/course-3.png" alt="" class="course__list-item__img">
+                        <img src="./assets/img/course/course-item-3.png" alt="" class="course__list-item__img">
 
                         <div class="course__item-info">
                             <p>
@@ -215,7 +217,7 @@
                     </div>
 
                     <div class="col course__list-item">
-                        <img src="./assets/img/course-list/course-4.png" alt="" class="course__list-item__img">
+                        <img src="./assets/img/course/course-item-5.png" alt="" class="course__list-item__img">
 
                         <div class="course__item-info">
                             <p>
@@ -263,7 +265,7 @@
                     </div>
 
                     <div class="col course__list-item">
-                        <img src="./assets/img/course-list/course-5.png" alt="" class="course__list-item__img">
+                        <img src="./assets/img/course/course-item-6.png" alt="" class="course__list-item__img">
 
                         <div class="course__item-info">
                             <p>
@@ -311,7 +313,7 @@
                     </div>
 
                     <div class="col course__list-item">
-                        <img src="./assets/img/course-list/course-6.png" alt="" class="course__list-item__img">
+                        <img src="./assets/img/course/course-item-8.png" alt="" class="course__list-item__img">
 
                         <div class="course__item-info">
                             <p>
@@ -388,73 +390,14 @@
                 </div>
             </div>
             <div class="course__right">
-                <h2>Course Category</h2>
-
                 <div class="course__right-cate">
-                    <div class="cate__subject">
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Commercial</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Office</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Shop</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Educate</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Academy</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Commercial</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">University</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-                    </div>
 
                     <div class="cate__subject">
                         <h3>Instructors</h3>
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" id="teacher" value="1">
                                 <label for="">Kenny White</label>
                             </div>
                             <span>15</span>
@@ -462,7 +405,7 @@
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" id="teacher" value="2">
                                 <label for="">John Doe</label>
                             </div>
                             <span>15</span>
@@ -474,24 +417,24 @@
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">All</label>
+                                <input type="checkbox" name="price" id="price" value="free">
+                                <label>Free</label>
                             </div>
                             <span>15</span>
                         </div>
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Free</label>
+                                <input type="checkbox" name="price" id="price" value="price">
+                                <label>Price</label>
                             </div>
                             <span>15</span>
                         </div>
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Paid</label>
+                                <input type="checkbox" name="price" id="price" value="sale">
+                                <label>Sale</label>
                             </div>
                             <span>15</span>
                         </div>
@@ -502,96 +445,31 @@
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" id="levels">
                                 <label for="">All Levels</label>
                             </div>
                             <span>15</span>
                         </div>
-
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Beginner</label>
+                                <input type="checkbox" name="levels" id="levels" value="1">
+                                <label>Beginner</label>
                             </div>
                             <span>15</span>
                         </div>
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Intermidiate</label>
+                                <input type="checkbox" name="levels" id="levels" value="2">
+                                <label>Intermidiate</label>
                             </div>
                             <span>15</span>
                         </div>
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Expert</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-                    </div>
-
-                    <div class="cate__subject">
-                        <h3>Review</h3>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="" id="">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
-                                <img src="./assets/icons/start.svg" alt="star">
+                                <input type="checkbox" name="levels" id="levels" value="3">
+                                <label>Expert</label>
                             </div>
                             <span>15</span>
                         </div>
@@ -606,7 +484,7 @@
         load("#footer", "./template/footer.html")
     </script>
 
-    <script type="module" src="./assets/js/InputSearch/search.js"></script>
+    <script type="module" src="./assets/js/course-list.js"></script>
 </body>
 
 </html>

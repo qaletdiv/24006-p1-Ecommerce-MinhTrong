@@ -2,6 +2,7 @@ const courseList = [
     {
         id: 1,
         teacherId: 1,
+        levelsId: 1,
         title: "HTML CSS từ Zero đến Hero",
         image: "./assets/img/course/course-item4.png",
         price: "$29.0",
@@ -10,6 +11,7 @@ const courseList = [
     {
         id: 2,
         teacherId: 2,
+        levelsId: 2,
         title: "HTML CSS Pro",
         image: "./assets/img/course/course-item-1.png",
         price: "$29.0",
@@ -20,6 +22,7 @@ const courseList = [
     {
         id: 3,
         teacherId: 1,
+        levelsId: 1,
         title: "Lập Trình Javascript Cơ Bản",
         image: "./assets/img/course/course-item-5.png",
         price: "$29.0",
@@ -30,6 +33,7 @@ const courseList = [
     {
         id: 4,
         teacherId: 2,
+        levelsId: 2,
         title: "Lập Trình Javascript Nâng Cao",
         image: "./assets/img/course/course-item-6.png",
         price: "$29.0",
@@ -40,6 +44,7 @@ const courseList = [
     {
         id: 5,
         teacherId: 1,
+        levelsId: 3,
         title: "Javascript Pro",
         image: "./assets/img/course/course-item-7.png",
         price: "$29.0",
@@ -49,6 +54,7 @@ const courseList = [
     {
         id: 6,
         teacherId: 2,
+        levelsId: 3,
         title: "Ngôn Ngữ Sass",
         image: "./assets/img/course/course-item-8.png",
         price: "$29.0",
@@ -68,23 +74,40 @@ const teachers = [
     },
 ]
 
-const inputSearch = document.querySelector(".course__left-filter__input-filed")
+const levels = [
+    {
+        id: 1,
+        name: "Beginner",
+    },
+    {
+        id: 2,
+        name: "Intermediate",
+    },
+    {
+        id: 3,
+        name: "Expert",
+    },
+]
+
+const inputSearch = document.querySelector(".course__left-filter__input-field")
 const btnSearch = document.querySelector(".course__left-filter__input-btn")
-const coursesContainer = document.querySelector(".row.row-cols-2")
+const coursesContainer = document.querySelector(".row.row-cols-1")
 const filterTeacher = document.querySelectorAll("#teacher")
 const filterPrice = document.querySelectorAll("#price")
 const filterLevels = document.querySelectorAll("#levels")
 
+console.log(inputSearch);
+console.log(btnSearch);
+console.log(coursesContainer);
 console.log(filterTeacher, filterPrice, filterLevels);
 
-console.log(typeof filterLevels);
-
-
 const renderCourses = (course) => {
-    coursesContainer.innerHTML = ""; // Xóa các nội dung trước đó.
+    coursesContainer.innerHTML = "";
 
-    course.forEach((item, index) => {
+    course.forEach(item => {
         const teacher = teachers.find(teacher => teacher.id === item.teacherId) || "Unknown Teacher";
+
+        const level = levels.find(level => level.id === item.levelsId) || "Unknown Level";
 
         const hasDiscount = item.isFree || item.sale;
 
@@ -99,53 +122,60 @@ const renderCourses = (course) => {
         }
 
         const courseItem = document.createElement("div");
-        courseItem.className = "col";
+        courseItem.className = "col course__list-item";
         courseItem.innerHTML = `
-            <article class="feature__item">
-                <img src="${item.image}" alt="${item.title}" class="feature__item-img"/>
+            <img src="${item.image}" alt="${item.title}" class="course__list-item__img"/>
+            <div class="course__item-info">
+                <p>
+                    by
+                    <strong>
+                        ${teacher.name}
+                    </strong>
+                </p>
+                <h3 class="course__item-title">
+                    <a href="${item.link}">${item.title}</a>
+                </h3>
 
-                <div class="feature__item-info">
-                    <p>by <strong>${teacher.name}</strong></p>
-                    <h3 class="feature__item-info__title">
-                        <a href="${item.link}">${item.title}</a>
-                    </h3>
-
-                    <div class="feature__item-info__plan">
-                        <div class="feature__item-info__plan-time">
-                            <img 
-                                src="./assets/img/feature/feature-icon-1.svg" 
-                                alt="time" 
-                                class="thumb"
-                            />
-                            <span>2Weeks</span>
-                        </div>
-
-                        <div class="feature__item-info__plan-time">
-                            <img 
-                                src="./assets/img/feature/feature-icon-2.svg" 
-                                alt="time" 
-                                class="thumb"
-                            />
-                            <span>156 students</span>
-                        </div>
+                <div class="course__item-desc">
+                    <div class="course__item-desc__article">
+                        <img src="./assets/icons/timer.svg" alt="">
+                        <span>2 Weeks</span>
                     </div>
 
-                    <div class="line"></div>
+                    <div class="course__item-desc__article">
+                        <img src="./assets/icons/student.svg" alt="">
+                        <span>156 students</span>
+                    </div>
 
-                    <div class="feature__item-info__meta">
-                        <div class="feature__item-info__meta-price">
-                            ${priceHTML}    
-                        </div>
-
-                        <a class="feature__item-info__meta-link" href="${item.link}">View More</a></a>
+                    
+                    <div class="course__item-desc__article">
+                        <img src="./assets/icons/levels.svg" alt="">
+                        <span>${level.name}</span>
+                    </div>
+                    
+                    <div class="course__item-desc__article">
+                        <img src="./assets/icons/lessons.svg" alt="">
+                        <span>Lessons</span>
                     </div>
                 </div>
-            </article>
-        `;
-        coursesContainer.appendChild(courseItem);
-    })
-}
 
+                <div class="line"></div>
+
+                <div class="course__item-info__meta">
+                    <div class="course__item-info__meta-price">
+                        ${priceHTML}
+                    </div>
+
+                    <a class="course__item-info__meta-link" href="${item.link}">
+                        View More
+                    </a>
+                </div>
+            </div>
+        `
+
+        coursesContainer.appendChild(courseItem)
+    });
+}
 
 inputSearch.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
@@ -270,11 +300,33 @@ filterPrice.forEach(price => {
     price.addEventListener("change", handleFilterPrice);
 })
 
+const handleFilterLevels = () => {
+    const selectedLevels = [];
+
+    for (const level of filterLevels) {
+        if (level.checked) {
+            selectedLevels.push(level.value);
+            console.log("Added level:", level.value, selectedLevels);
+        }
+    }
+
+    if (selectedLevels.length === 0) {
+        console.log("No levels selected");
+        renderCourses(courseList);
+        return;
+    }
+
+    // Lọc danh sách khóa học dựa trên mức độ đã chọn
+    const filterCourseByLevel = courseList.filter(course => {
+        return selectedLevels.includes(String(course.levelsId));
+    })
+
+    renderCourses(filterCourseByLevel);
+
+}
+
+filterLevels.forEach(level => {
+    level.addEventListener("change", handleFilterLevels);
+})
+
 renderCourses(courseList);
-
-
-
-
-
-
-

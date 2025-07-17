@@ -1,3 +1,5 @@
+@use "../abstrasts";
+
 .course {
     padding-top: 60px;
     padding-bottom: 90px;
@@ -15,6 +17,11 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
+
+        @include abstrasts.screen(sm) {
+            flex-direction: column;
+            gap: 20px;
+        }
 
         h2 {
             font-weight: 600;
@@ -84,6 +91,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include abstrasts.screen(xl) {
+        display: none;
+    }
 }
 
 .cate__subject {

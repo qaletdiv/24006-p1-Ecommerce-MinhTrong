@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="row row-cols-2 gy-3">
+                <div class="row row-cols-2 gy-3 row-cols-lg-2    row-cols-md-1">
                     <div class="col">
                         <article class="feature__item">
                             <img src="./assets/img/course/course-item4.png" alt="" class="feature__item-img">
@@ -192,6 +192,11 @@
                                     <div class="feature__item-info__plan-time">
                                         <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
                                         <span>156 students</span>
+                                    </div>
+
+                                    <div class="feature__item-info__plan-time">
+                                        <img src="./assets/icons/levels.svg" alt="" class="thumb">
+                                        <span>Beginner</span>
                                     </div>
                                 </div>
 
@@ -365,19 +370,11 @@
                     </div>
 
                     <div class="cate__subject">
-                        <h3>Price</h3>
+                        <h3>Levels</h3>
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="levels" id="levels">
-                                <label for="">All Levels</label>
-                            </div>
-                            <span>15</span>
-                        </div>
-
-                        <div class="cate__subject-box">
-                            <div class="cate__subject-box__item">
-                                <input type="checkbox" name="levels" id="levels">
+                                <input type="checkbox" name="levels" id="levels" value="1">
                                 <label>Beginner</label>
                             </div>
                             <span>15</span>
@@ -385,7 +382,7 @@
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="levels" id="levels">
+                                <input type="checkbox" name="levels" id="levels" value="2">
                                 <label>Intermidiate</label>
                             </div>
                             <span>15</span>
@@ -393,7 +390,7 @@
 
                         <div class="cate__subject-box">
                             <div class="cate__subject-box__item">
-                                <input type="checkbox" name="levels" id="levels">
+                                <input type="checkbox" name="levels" id="levels" value="3">
                                 <label>Expert</label>
                             </div>
                             <span>15</span>
@@ -411,7 +408,7 @@
         load("#footer", "./template/footer.html")
     </script>
 
-    <script src="./assets/js/InputSearch/search.js"></script>
+    <script src="./assets/js/course.js"></script>
 
 </body>
 

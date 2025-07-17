@@ -2,6 +2,8 @@
 *,
 ::before,
 ::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,6 +30,12 @@
     --light-gray: #ecf0f1;
     --border-radius: 8px;
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -62,39 +70,17 @@ input::placeholder {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 12px;
+    line-height: 1.4;
 }
 
 .title {
     text-align: center;
     margin-bottom: 50px;
+    line-height: 1.4;
 }
 
 .line {
     width: 100%;
     height: 2px;
     background-color: #EAEAEA;
-}
-
-.price {
-    color: #55BE24;
-    font-weight: 600;
-    margin-right: 6px;
-}
-
-.price-line {
-    color: #9D9D9D;
-    font-weight: 400;
-    text-decoration: line-through;
-
-}
-
-.free {
-    color: #55BE24;
-    font-weight: 600;
-}
-
-.sale {
-    color: #F51A1A;
-    font-weight: 600;
-    font-size: 20px;
 }

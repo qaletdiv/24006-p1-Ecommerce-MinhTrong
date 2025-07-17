@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "sass:map";
+@use "../abstrasts";
 
 $grid-breakpoints: (
     xxl: 1400px,
@@ -44,7 +45,7 @@ $gutters: (
 .container {
     position: relative;
     @extend .container-fluid;
-    width: 1370px;
+    max-width: 1370px;
 }
 
 .row {
@@ -65,7 +66,7 @@ $gutters: (
 }
 
 @mixin make-media-query($dimension) {
-    @media (max-width: ($dimension - 0.02)) {
+    @media (max-width: ($dimension)) {
         @content;
     }
 }

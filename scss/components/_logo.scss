@@ -6,7 +6,7 @@
     gap: 10px;
 
     @include abstrasts.screen(lg) {
-        margin-left: 40px;
+        // margin-left: 40px;
     }
 
     @include abstrasts.screen(md) {

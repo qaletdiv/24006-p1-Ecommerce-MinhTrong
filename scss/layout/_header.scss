@@ -14,27 +14,46 @@
     top: 0;
     z-index: 1000;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
-    &__more {
-        display: none;
+    @include abstrasts.screen(xl) {
+        justify-content: space-between;
+    }
 
-        @include abstrasts.screen(lg) {
-            display: block;
-        }
+    @include abstrasts.screen(lg) {
+        justify-content: space-between;
+    }
+
+    @include abstrasts.screen(md) {
+        justify-content: space-between;
     }
 }
 
 .navbar {
     margin-left: 144px;
 
+    @include abstrasts.screen(xl) {
+        margin-left: 0;
+    }
+
     @include abstrasts.screen(lg) {
-        display: none;
+        margin-left: 0;
+    }
+
+    @include abstrasts.screen(md) {
+        margin-left: 0;
     }
 
     &__list {
         @extend %flexItemsCenter;
         gap: 70px;
+
+        @include abstrasts.screen(lg) {
+            gap: 40px;
+        }
+
+        @include abstrasts.screen(md) {
+            display: none;
+        }
     }
 
     &__link {
@@ -79,9 +98,39 @@
     gap: 20px;
     margin-left: auto;
 
+    @include abstrasts.screen(xl) {
+        margin-left: 0;
+    }
+
+    @include abstrasts.screen(lg) {
+        margin-left: 0;
+    }
+
+    @include abstrasts.screen(md) {
+        margin-left: 0;
+    }
+
+    &__more {
+        background-color: transparent;
+        display: none;
+
+        @include abstrasts.screen(md) {
+            display: block;
+        }
+
+        svg {
+            width: 24px
+        }
+    }
+
+
     &__user {
         @extend %flexItemsCenter;
         gap: 10px;
+
+        @include abstrasts.screen(md) {
+            display: none;
+        }
 
         a,
         span {

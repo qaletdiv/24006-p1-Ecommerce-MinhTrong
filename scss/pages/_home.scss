@@ -3,10 +3,6 @@
 .home {
     &__container {
         margin-bottom: 90px;
-
-        @include abstrasts.screen(md) {
-            margin-top: 30px;
-        }
     }
 
     &__heading {
@@ -19,12 +15,26 @@
             font-size: 36px;
             font-weight: 500;
             font-family: var(--font-family-secondary);
+
+            @include abstrasts.screen(md) {
+                font-size: 24px;
+            }
+
+            @include abstrasts.screen(sm) {
+                font-size: 18px;
+            }
         }
 
         &-btn {
             background-color: transparent;
             border: 1px solid #000000;
             border-radius: 50px;
+
+            @include abstrasts.screen(md) {
+                height: 30px;
+                padding: 10px;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -70,12 +80,20 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @include abstrasts.screen(md) {
+        color: #FF3D00;
+    }
 
     &__info {
         max-width: 450px;
         padding: 55px 0 55px 50px;
 
-        span {
+        @include abstrasts.screen(md) {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        p {
             font-weight: 500;
         }
 
@@ -84,6 +102,10 @@
             font-weight: 600;
             margin-top: 12px;
             margin-bottom: 24px;
+
+            @include abstrasts.screen(md) {
+                font-size: 24px;
+            }
         }
 
         p {
@@ -99,6 +121,10 @@
     color: #fff;
     border-radius: 50px;
     width: 177px;
+
+    @include abstrasts.screen(md) {
+        margin: 0 auto;
+    }
 }
 
 .stats__item {
@@ -132,8 +158,16 @@
     align-items: center;
     gap: 125px;
 
+    @include abstrasts.screen(lg) {
+        gap: 10px;
+    }
+
     &__img {
         flex: 1;
+
+        @include abstrasts.screen(lg) {
+            width: 300px;
+        }
     }
 
     &__info {
@@ -160,12 +194,14 @@
 
 .banner__2 {
     background-image: url(../../assets/img/banner/banner-2.png);
+    background-position: left center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0;
     line-height: 1.5;
+    border-radius: 20px;
 
     .btn__2 {
         margin: 0 auto;
@@ -205,10 +241,21 @@
     background-repeat: no-repeat;
     background-image: url(../../assets/img/banner/banner-3.png);
 
+    @include abstrasts.screen(lg) {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
     &__info {
         display: flex;
         align-items: center;
         gap: 32px;
+
+        @include abstrasts.screen(lg) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         &-img {
             display: flex;
@@ -218,6 +265,15 @@
             height: 120px;
             border-radius: 50%;
             background-color: #fff;
+
+            @include abstrasts.screen(lg) {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    width: 24px;
+                }
+            }
         }
 
         p {
@@ -229,6 +285,11 @@
         display: flex;
         gap: 20px;
         align-items: center;
+
+        @include abstrasts.screen(lg) {
+            flex-direction: column;
+            margin-top: 10px;
+        }
 
         &-outline {
             position: relative;

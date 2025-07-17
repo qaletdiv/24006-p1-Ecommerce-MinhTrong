@@ -1,3 +1,5 @@
+@use "../abstrasts";
+
 .feature__item {
     border: 1px solid #e1e1e1;
     border-radius: 25px;
@@ -32,6 +34,11 @@
             font-size: 24px;
             line-height: 1.2;
             font-weight: 500;
+
+            @include abstrasts.screen(md) {
+                font-size: 16px;
+                height: 38px;
+            }
         }
 
         &__plan {
@@ -57,4 +64,30 @@
         }
 
     }
+}
+
+.price {
+    color: #55BE24;
+    font-weight: 600;
+    margin-right: 6px;
+    font-size: 20px;
+}
+
+.price-line {
+    color: #9D9D9D;
+    font-weight: 400;
+    text-decoration: line-through;
+
+}
+
+.free {
+    color: #55BE24;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sale {
+    color: #F51A1A;
+    font-weight: 600;
+    font-size: 20px;
 }

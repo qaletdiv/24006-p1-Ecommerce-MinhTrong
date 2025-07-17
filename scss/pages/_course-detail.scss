@@ -26,11 +26,25 @@
                 margin-bottom: 16px;
             }
 
-            p {
+            &-desc {
                 max-width: 600px;
                 font-weight: 400;
                 line-height: 1.4;
                 font-size: 18px;
+                margin-bottom: 24px;
+            }
+
+            &-btn {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+
+                @include abstrasts.screen(sm) {
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: flex-start;
+
+                }
             }
         }
 
@@ -39,6 +53,9 @@
 
 
             img {
+                border-radius: 24px;
+                overflow: hidden;
+
                 @include abstrasts.screen(lg) {
                     width: 400px;
                     height: 400px;
@@ -47,13 +64,60 @@
                 @include abstrasts.screen(md) {
                     display: none;
                 }
-
-                border-radius: 24px;
-                overflow: hidden;
             }
         }
     }
 
+}
+
+.course__info {
+    display: flex;
+    justify-content: space-between;
+
+    &-rate {
+        &__star {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &__number {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+
+
+        &__text {
+            font-weight: 300;
+            margin-top: 10px;
+        }
+    }
+}
+
+.course__enrolled {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    &-text {
+        font-size: 14px;
+
+        strong {
+            font-weight: 700;
+        }
+    }
 }
 
 .course__detail-btn {
@@ -64,13 +128,17 @@
     font-weight: 600;
     background-color: var(--primary-color);
     color: #fff;
-    margin-top: 20px;
 
     &__price {
         font-size: 18px;
         font-weight: 700;
         margin-left: 16px;
         margin-right: 10px;
+
+        @include abstrasts.screen(sm) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
 

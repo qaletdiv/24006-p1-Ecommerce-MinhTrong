@@ -2892,11 +2892,24 @@ input::placeholder {
   line-height: 1.2;
   margin-bottom: 16px;
 }
-.course__detail-info__content p {
+.course__detail-info__content-desc {
   max-width: 600px;
   font-weight: 400;
   line-height: 1.4;
   font-size: 18px;
+  margin-bottom: 24px;
+}
+.course__detail-info__content-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+@media (max-width: 576px) {
+  .course__detail-info__content-btn {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
 }
 .course__detail-info__img img {
   border-radius: 24px;
@@ -2914,6 +2927,45 @@ input::placeholder {
   }
 }
 
+.course__info {
+  display: flex;
+  justify-content: space-between;
+}
+.course__info-rate__star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.course__info-rate__star img {
+  width: 18px;
+  height: 18px;
+}
+.course__info-rate__number {
+  font-size: 24px;
+  font-weight: 700;
+}
+.course__info-rate__text {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.course__enrolled {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.course__enrolled svg {
+  width: 14px;
+  height: 14px;
+}
+.course__enrolled-text {
+  font-size: 14px;
+}
+.course__enrolled-text strong {
+  font-weight: 700;
+}
+
 .course__detail-btn {
   padding-inline: 12px;
   height: 48px;
@@ -2922,13 +2974,18 @@ input::placeholder {
   font-weight: 600;
   background-color: var(--primary-color);
   color: #fff;
-  margin-top: 20px;
 }
 .course__detail-btn__price {
   font-size: 18px;
   font-weight: 700;
   margin-left: 16px;
   margin-right: 10px;
+}
+@media (max-width: 576px) {
+  .course__detail-btn__price {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .course__overview-cta {

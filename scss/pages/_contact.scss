@@ -1,0 +1,42 @@
+%contactFlex {
+    display: flex;
+    align-items: center;
+}
+
+.contact {
+    &__container {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    &__meta {
+        @extend %contactFlex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        &__img {
+            @extend %contactFlex;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            object-fit: cover;
+            background-color: #F5F5F5;
+        }
+
+        p {
+            color: #555555;
+            margin-bottom: 12px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+}

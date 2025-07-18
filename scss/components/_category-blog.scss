@@ -1,0 +1,57 @@
+@use "../abstrasts";
+
+.category {
+    flex: 0 0 270px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__blog {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+
+        &-title {
+            line-height: 1.5;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 30px;
+
+        @include abstrasts.screen(lg) {
+            margin-bottom: 20px;
+        }
+
+        &-title {
+            padding: 8px 20px;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+    }
+}

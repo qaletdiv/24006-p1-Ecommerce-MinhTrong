@@ -119,4 +119,150 @@
             top: 5px;
         }
     }
+
+    &__comments {
+        max-width: 850px;
+        margin-top: 40px;
+        margin-bottom: 90px;
+        color: #333;
+
+        @include abstrasts.screen(md) {
+            margin-bottom: 30px;
+        }
+
+        &-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        &-note {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        &-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        &-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        &-cta {
+            margin-bottom: 16px;
+        }
+
+        &-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        &-save {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        &-checkbox {
+            margin-right: 8px;
+        }
+
+        &-label {
+            color: #444;
+        }
+
+        &__btn {
+            background-color: #ff6a00;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e65a00;
+            }
+        }
+    }
+
+    .course__item-info__price-item-price {
+        color: #ff6a00;
+    }
+
+    .course__instructor {
+        &-info {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            &__details {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+
+                p {
+                    line-height: 1.5;
+                    color: #555555;
+                }
+
+                &-stats {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+
+        &-desc {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #555555;
+            line-height: 1.5;
+        }
+
+        &-socials {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            p {
+                letter-spacing: 1.2;
+            }
+
+            &__icon {
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    filter: brightness(0) saturate(100%) invert(50%) sepia(98%) saturate(1216%) hue-rotate(340deg) brightness(102%) contrast(101%);
+                    transition: filter 0.3s ease;
+                    border-radius: 50px;
+                }
+            }
+
+        }
+    }
 }

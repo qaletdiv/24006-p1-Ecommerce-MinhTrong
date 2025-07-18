@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact || EduPress</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./template/header.html")
+    </script>
+
+    <!-- MAIN -->
+    <main>
+        <section class="contact">
+            <div class="container">
+                <article class="contact__container">
+                    <div class="contact__info">
+                        <h3 class="contact__title">Need a direct line?</h3>
+                        <p class="contact__desc">
+                            Cras massa et odio donec faucibus in. Vitae pretium massa dolor ullamcorper lectus elit
+                            quam.
+                        </p>
+
+                        <div class="contact__meta">
+                            <div class="contact__meta__img">
+                                <img src="./assets/icons/phone.svg" alt="phone">
+                            </div>
+                            <div class="contact__meta__content">
+                                <p>Phone</p>
+                                <span>(123) 456 7890</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__meta">
+                            <div class="contact__meta__img">
+                                <img src="./assets/icons/email.svg" alt="email">
+                            </div>
+                            <div class="contact__meta__content">
+                                <p>Email</p>
+                                <span>contact@thimpress.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__map">
+                        <img src="./assets/img/contact/contact-1.png" alt="map">
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script>
+        load("#footer", "./template/footer.html")
+    </script>
+</body>
+
+</html>

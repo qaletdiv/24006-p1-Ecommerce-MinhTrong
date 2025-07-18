@@ -1,0 +1,79 @@
+@use "../abstrasts";
+
+%blogFlex {
+    display: flex;
+    align-items: center;
+}
+
+.blog {
+    margin-top: 60px;
+
+    @include abstrasts.screen(sm) {
+        margin-top: 20px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        @include abstrasts.screen(lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__detail {
+        max-width: 990px;
+        width: 100%;
+        flex: 2;
+
+        &-title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #333333;
+
+            @include abstrasts.screen(sm) {
+                font-size: 28px;
+            }
+        }
+    }
+
+    &__post {
+        @extend %blogFlex;
+        gap: 24px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        @include abstrasts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start
+        }
+
+        &-item {
+            @extend %blogFlex;
+            gap: 10px;
+        }
+
+        &-img {
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        &-content {
+            line-height: 1.5;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            color: #555555;
+
+            &__text {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

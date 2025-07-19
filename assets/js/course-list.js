@@ -96,11 +96,6 @@ const filterTeacher = document.querySelectorAll("#teacher")
 const filterPrice = document.querySelectorAll("#price")
 const filterLevels = document.querySelectorAll("#levels")
 
-console.log(inputSearch);
-console.log(btnSearch);
-console.log(coursesContainer);
-console.log(filterTeacher, filterPrice, filterLevels);
-
 const renderCourses = (course) => {
     coursesContainer.innerHTML = "";
 
@@ -124,7 +119,10 @@ const renderCourses = (course) => {
         const courseItem = document.createElement("div");
         courseItem.className = "col course__list-item";
         courseItem.innerHTML = `
-            <img src="${item.image}" alt="${item.title}" class="course__list-item__img"/>
+            <a class="course__list-item__link course__link" href="${item.link}" data-id="${item.id}">
+                <img src="${item.image}" alt="${item.title}" class="course__list-item__img"/>
+            </a>
+            
             <div class="course__item-info">
                 <p>
                     by
@@ -133,7 +131,7 @@ const renderCourses = (course) => {
                     </strong>
                 </p>
                 <h3 class="course__item-title">
-                    <a href="${item.link}">${item.title}</a>
+                    <a class="course__link" href="${item.link}" data-id="${item.id}">${item.title}</a>
                 </h3>
 
                 <div class="course__item-desc">
@@ -166,7 +164,7 @@ const renderCourses = (course) => {
                         ${priceHTML}
                     </div>
 
-                    <a class="course__item-info__meta-link" href="${item.link}">
+                    <a class="course__item-info__meta-link course__link" href="${item.link}" data-id="${item.id}">
                         View More
                     </a>
                 </div>
@@ -329,4 +327,19 @@ filterLevels.forEach(level => {
     level.addEventListener("change", handleFilterLevels);
 })
 
+function handleRenderCourseDetail() {
+    const courseLink = document.querySelectorAll(".course__link");
+
+    courseLink.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const courseId = e.currentTarget.getAttribute("data-id")
+            localStorage.setItem("courseId", courseId);
+            window.location.href = e.currentTarget.getAttribute("href");
+        })
+    })
+
+}
+
 renderCourses(courseList);
+handleRenderCourseDetail();

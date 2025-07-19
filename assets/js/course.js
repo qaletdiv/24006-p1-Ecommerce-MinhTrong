@@ -95,10 +95,6 @@ const coursesContainer = document.querySelector(".row.row-cols-2");
 const filterTeacher = document.querySelectorAll("#teacher");
 const filterPrice = document.querySelectorAll("#price");
 const filterLevels = document.querySelectorAll("#levels");
-const courseLink = document.querySelectorAll(".course__link");
-
-console.log(courseLink);
-
 
 const renderCourses = (course) => {
     coursesContainer.innerHTML = ""; // Xóa các nội dung trước đó.
@@ -130,9 +126,11 @@ const renderCourses = (course) => {
 
                 <div class="feature__item-info">
                     <p>by <strong>${teacher.name}</strong></p>
-                    <h3 class="feature__item-info__title">
-                        <a href="${item.link}" class="course__link">${item.title}</a>
-                    </h3>
+                    <a href="${item.link}" class="course__link" data-id="${item.id}">
+                        <h3 class="feature__item-info__title">
+                            ${item.title}
+                        </h3>
+                    </a>
 
                     <div class="feature__item-info__plan">
                         <div class="feature__item-info__plan-time">
@@ -166,7 +164,7 @@ const renderCourses = (course) => {
                             ${priceHTML}    
                         </div>
 
-                        <a class="feature__item-info__meta-link course__link" href="${item.link}">View More</a></a>
+                        <a class="feature__item-info__meta-link course__link" href="${item.link}" data-id="${item.id}">View More</a></a>
                     </div>
                 </div>
             </article>
@@ -328,7 +326,20 @@ filterLevels.forEach(level => {
     level.addEventListener("change", handleFilterLevels);
 })
 
+function renderCourseDetail() {
+    document.querySelectorAll(".course__link").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const courseId = e.currentTarget.getAttribute("data-id")
+            localStorage.setItem("courseId", courseId);
+            window.location.href = e.currentTarget.getAttribute("href");
+        })
+    })
+}
+
 renderCourses(courseList);
+renderCourseDetail();
+
 
 
 

@@ -84,3 +84,26 @@ input::placeholder {
     height: 2px;
     background-color: #EAEAEA;
 }
+
+.backgroundCss {
+    background: linear-gradient(135deg, #15cbe7, #396bf0);
+}
+
+.backgroundCssPlus {
+    background: linear-gradient(135deg, #2196f3 0%, #3f51b5 50%, #7b1fa2 100%);
+
+}
+
+.backgroundJs {
+    background: linear-gradient(135deg, #ffe600, #ff9b16, #ff9418);
+}
+
+.backgroundJavascript {
+    background: linear-gradient(135deg, #ff3d00 0%, #ff6d00 50%, #ff9800 100%);
+
+}
+
+.backgroundSass {
+    background: radial-gradient(100% 100% at 50% 50%, #f9cbe1 0%, #e863a5 50%, #de3889 100%);
+
+}

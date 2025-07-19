@@ -7,6 +7,14 @@
     &__container {
         display: flex;
         gap: 30px;
+
+        @include abstrasts.screen(xl) {
+            flex-wrap: wrap;
+        }
+
+        @include abstrasts.screen(lg) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -92,9 +100,7 @@
     flex-direction: column;
     gap: 20px;
 
-    @include abstrasts.screen(xl) {
-        display: none;
-    }
+
 }
 
 .cate__subject {

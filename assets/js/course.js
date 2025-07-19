@@ -89,12 +89,16 @@ const levels = [
     },
 ]
 
-const inputSearch = document.querySelector(".course__left-filter__input-filed")
-const btnSearch = document.querySelector(".course__left-filter__input-btn")
-const coursesContainer = document.querySelector(".row.row-cols-2")
-const filterTeacher = document.querySelectorAll("#teacher")
-const filterPrice = document.querySelectorAll("#price")
-const filterLevels = document.querySelectorAll("#levels")
+const inputSearch = document.querySelector(".course__left-filter__input-filed");
+const btnSearch = document.querySelector(".course__left-filter__input-btn");
+const coursesContainer = document.querySelector(".row.row-cols-2");
+const filterTeacher = document.querySelectorAll("#teacher");
+const filterPrice = document.querySelectorAll("#price");
+const filterLevels = document.querySelectorAll("#levels");
+const courseLink = document.querySelectorAll(".course__link");
+
+console.log(courseLink);
+
 
 const renderCourses = (course) => {
     coursesContainer.innerHTML = ""; // Xóa các nội dung trước đó.
@@ -120,12 +124,14 @@ const renderCourses = (course) => {
         courseItem.className = "col";
         courseItem.innerHTML = `
             <article class="feature__item">
-                <img src="${item.image}" alt="${item.title}" class="feature__item-img"/>
+                <a href="${item.link}" data-id="${item.id}" class="course__link">
+                    <img src="${item.image}" alt="${item.title}" class="feature__item-img"/>
+                </a>
 
                 <div class="feature__item-info">
                     <p>by <strong>${teacher.name}</strong></p>
                     <h3 class="feature__item-info__title">
-                        <a href="${item.link}">${item.title}</a>
+                        <a href="${item.link}" class="course__link">${item.title}</a>
                     </h3>
 
                     <div class="feature__item-info__plan">
@@ -160,7 +166,7 @@ const renderCourses = (course) => {
                             ${priceHTML}    
                         </div>
 
-                        <a class="feature__item-info__meta-link" href="${item.link}">View More</a></a>
+                        <a class="feature__item-info__meta-link course__link" href="${item.link}">View More</a></a>
                     </div>
                 </div>
             </article>

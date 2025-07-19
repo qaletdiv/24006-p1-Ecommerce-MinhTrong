@@ -1871,25 +1871,64 @@ input::placeholder {
 
 .course__list-item {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 30px;
   flex: 1;
-  min-width: 990px;
+  flex-basis: 100%;
   border: 1px solid #EAEAEA;
   border-radius: 20px;
 }
-.course__list-item__img {
+@media (max-width: 992px) {
+  .course__list-item {
+    margin: 0 12px 12px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .course__list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0;
+    margin: 0 12px 12px 15px;
+  }
+}
+.course__list-item__wrapper {
   width: 410px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .course__list-item__wrapper {
+    width: 100%;
+  }
+}
+.course__list-item__img {
+  display: block;
+  height: 100%;
+  width: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  object-fit: cover;
   margin-left: -15px;
+}
+@media (max-width: 768px) {
+  .course__list-item__img {
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    margin-left: 0;
+  }
 }
 
 .course__item-info {
   width: 100%;
 }
+@media (max-width: 768px) {
+  .course__item-info {
+    padding: 0 20px;
+  }
+}
 .course__item-info p {
   font-family: var(--font-family-secondary);
+  margin-top: 20px;
 }
 .course__item-info p strong {
   font-weight: 500;
@@ -1897,8 +1936,13 @@ input::placeholder {
 .course__item-info h3 {
   font-weight: 600;
   font-size: 20px;
-  margin-top: 12px;
+  margin-top: 58px;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .course__item-info h3 {
+    margin-top: 20px;
+  }
 }
 
 .course__item-desc {
@@ -1906,6 +1950,11 @@ input::placeholder {
   margin-bottom: 67px;
   gap: 24px;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .course__item-desc {
+    margin-bottom: 20px;
+  }
 }
 .course__item-desc img {
   margin-bottom: -2px;
@@ -1920,15 +1969,28 @@ input::placeholder {
   align-items: center;
   margin-top: 16px;
 }
+@media (max-width: 768px) {
+  .course__item-info__meta {
+    margin-bottom: 25px;
+  }
+}
 .course__item-info__meta-link {
   font-weight: 600;
   font-family: var(--font-family-secondary);
 }
 
 .active-tabs {
-  width: 850px;
+  max-width: 850px;
+  width: 100%;
   position: relative;
   margin-top: 50px;
+}
+@media (max-width: 992px) {
+  .active-tabs {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 .course__overview-tab__container {
@@ -1948,6 +2010,16 @@ input::placeholder {
   height: 64px;
   border: 1px solid #EAEAEA;
   font-size: 20px;
+}
+@media (max-width: 768px) {
+  .course__overview-tab__container label {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .course__overview-tab__container label {
+    font-size: 14px;
+  }
 }
 
 .course__overview-tab__container label:first-of-type {
@@ -2779,16 +2851,14 @@ input::placeholder {
 }
 @media (max-width: 992px) {
   .promotion {
-    gap: 10px;
+    gap: 20px;
+    flex-direction: column;
   }
 }
 .promotion__img {
-  flex: 1;
-}
-@media (max-width: 992px) {
-  .promotion__img {
-    width: 300px;
-  }
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .promotion__info-heading {
   font-size: 24px;
@@ -2948,6 +3018,16 @@ input::placeholder {
   display: flex;
   gap: 30px;
 }
+@media (max-width: 1200px) {
+  .course__container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 992px) {
+  .course__container {
+    flex-direction: column;
+  }
+}
 
 .course__left {
   max-width: 990px;
@@ -3021,11 +3101,6 @@ input::placeholder {
   flex-direction: column;
   gap: 20px;
 }
-@media (max-width: 1200px) {
-  .course__right-cate {
-    display: none;
-  }
-}
 
 .cate__subject h3 {
   font-size: 20px;
@@ -3053,6 +3128,11 @@ input::placeholder {
   background-color: #fff;
   color: var(--text-color);
   border-radius: 32px;
+}
+@media (max-width: 992px) {
+  .course__detail-info {
+    align-items: stretch;
+  }
 }
 .course__detail-info__content h2 {
   font-size: 48px;
@@ -3082,12 +3162,9 @@ input::placeholder {
 .course__detail-info__img img {
   border-radius: 24px;
   overflow: hidden;
-}
-@media (max-width: 992px) {
-  .course__detail-info__img img {
-    width: 400px;
-    height: 400px;
-  }
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 @media (max-width: 768px) {
   .course__detail-info__img img {
@@ -3165,6 +3242,12 @@ input::placeholder {
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 992px) {
+  .course__instructor-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .course__instructor-info__details {
   display: flex;
   flex-direction: column;
@@ -3217,6 +3300,9 @@ input::placeholder {
 }
 
 .video__box-container {
+  max-width: 100%;
+  height: auto;
+  display: block;
   box-shadow: 2px 4px 29px -4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 4px 29px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 4px 29px -4px rgba(0, 0, 0, 0.75);
@@ -3246,16 +3332,24 @@ input::placeholder {
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-color: #262626;
   border-radius: 8px;
+  overflow-x: auto;
 }
 .video .video__content-code code {
   display: block;
   white-space: pre;
   margin: 0;
   padding: 0;
+  min-width: 100%;
 }
 .video .video__content-code pre,
 .video .video__content-code code {
   text-align: left;
+}
+.video .video__content-code pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  width: 100%;
 }
 .video .video__content-summary {
   padding: 10px 28px 10px 20px;
@@ -4032,10 +4126,36 @@ input::placeholder {
   display: flex;
   gap: 30px;
 }
+@media (max-width: 768px) {
+  .contact__container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .contact__container {
+    flex-direction: column;
+  }
+}
+.contact__info {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .contact__title {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+.contact__desc {
+  font-family: var(--font-family-secondary);
+  font-weight: 300;
+  margin-bottom: 16px;
+  max-width: 385px;
 }
 .contact__meta {
   gap: 1rem;
@@ -4055,6 +4175,21 @@ input::placeholder {
 }
 .contact__meta span {
   font-weight: 600;
+}
+.contact__map img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.contact__form {
+  max-width: 100%;
+}
+.contact__form-btn {
+  transition: all 0.4s ease-in-out;
+}
+.contact__form-btn:hover {
+  background-color: var(--primary-color);
+  color: #F5F5F5;
 }
 
 html {

@@ -1,3 +1,5 @@
+@use "../abstrasts";
+
 %contactFlex {
     display: flex;
     align-items: center;
@@ -7,12 +9,37 @@
     &__container {
         display: flex;
         gap: 30px;
+
+        @include abstrasts.screen(md) {
+            flex-direction: column;
+        }
+
+        @include abstrasts.screen(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        flex: 1;
+
+        @include abstrasts.screen(md) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__title {
         font-size: 2rem;
         margin-bottom: 1rem;
         font-weight: 500;
+    }
+
+    &__desc {
+        font-family: var(--font-family-secondary);
+        font-weight: 300;
+        margin-bottom: 16px;
+        max-width: 385px;
     }
 
     &__meta {
@@ -37,6 +64,27 @@
 
         span {
             font-weight: 600;
+        }
+    }
+
+    &__map {
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__form {
+        max-width: 100%;
+
+        &-btn {
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: #F5F5F5;
+            }
         }
     }
 }

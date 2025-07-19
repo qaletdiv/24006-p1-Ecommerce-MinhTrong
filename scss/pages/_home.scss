@@ -159,15 +159,16 @@
     gap: 125px;
 
     @include abstrasts.screen(lg) {
-        gap: 10px;
+        gap: 20px;
+        flex-direction: column;
     }
 
     &__img {
-        flex: 1;
+        max-width: 100%;
+        height: auto;
+        display: block;
 
-        @include abstrasts.screen(lg) {
-            width: 300px;
-        }
+
     }
 
     &__info {

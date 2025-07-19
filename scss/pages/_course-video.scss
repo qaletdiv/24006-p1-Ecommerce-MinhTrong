@@ -9,6 +9,9 @@
 }
 
 .video__box-container {
+    max-width: 100%;
+    height: auto;
+    display: block;
     box-shadow: 2px 4px 29px -4px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 4px 29px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 4px 29px -4px rgba(0, 0, 0, 0.75);
@@ -43,18 +46,26 @@
         text-shadow: 0 1px rgba(0, 0, 0, .3);
         background-color: #262626;
         border-radius: 8px;
+        overflow-x: auto;
 
         code {
             display: block;
             white-space: pre;
             margin: 0;
             padding: 0;
+            min-width: 100%;
         }
 
-        // Loại bỏ thụt trái do xuống dòng trong HTML
         pre,
         code {
             text-align: left;
+        }
+
+        pre {
+            margin: 0;
+            padding: 0;
+            overflow-x: auto;
+            width: 100%;
         }
     }
 

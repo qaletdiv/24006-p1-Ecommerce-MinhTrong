@@ -2382,7 +2382,6 @@ input::placeholder {
   position: relative;
   display: inline-block;
 }
-
 .dropdown__toggle {
   background: var(--primary-color);
   color: #f1f1f1;
@@ -2391,7 +2390,6 @@ input::placeholder {
   cursor: pointer;
   border-radius: 4px;
 }
-
 .dropdown__menu {
   position: absolute;
   top: 35px;
@@ -2407,26 +2405,20 @@ input::placeholder {
   z-index: 1000;
   min-width: 160px;
 }
-
 .dropdown__item {
   border-bottom: 1px solid #eee;
 }
-
 .dropdown__item:last-child {
   border-bottom: none;
 }
-
 .dropdown__link {
   display: block;
   padding: 10px 16px;
   color: #333;
-  text-decoration: none;
 }
-
 .dropdown__link:hover {
   background: #f1f1f1;
 }
-
 .dropdown:hover .dropdown__menu {
   display: block;
 }

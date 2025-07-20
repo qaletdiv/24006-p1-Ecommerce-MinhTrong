@@ -1,4 +1,4 @@
-const courseList = [
+const courseListDetail = [
     {
         id: 1,
         teacherId: 1,
@@ -100,7 +100,7 @@ console.log(couseId);
 
 
 if (couseId) {
-    const course = courseList.find(course => course.id === Number(couseId));
+    const course = courseListDetail.find(course => course.id === Number(couseId));
 
     console.log(course);
 
@@ -177,6 +177,4 @@ if (couseId) {
             </div>
         `
     }
-
-
 }

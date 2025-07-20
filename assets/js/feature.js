@@ -1,4 +1,4 @@
-const courseList = [
+const courseListIndex = [
     {
         id: 1,
         teacherId: 1,
@@ -91,44 +91,8 @@ const levels = [
 
 const coursesContainer = document.querySelectorAll(".row.row-cols-3");
 const signInBtn = document.getElementsByClassName("top-actions__user-btn")
-const btnForm = document.getElementsByClassName("top-actions__user-btn")
-const userContainer = document.querySelector(".top-actions__user")
+// const btnForm = document.getElementsByClassName("top-actions__user-btn")
 const navbarLink = document.querySelectorAll(".navbar__link");
-
-const renderUser = () => {
-    Array.from(btnForm).forEach(btn => {
-        btn.style.display = "none";
-    })
-
-    const user = JSON.parse(localStorage.getItem("currentUser"))
-
-    if (user) {
-        userContainer.innerHTML = `
-        <p class="top-actions__user-email">
-            <div class="dropdown">
-                <button class="dropdown__toggle">
-                    <a href="./profile.html">
-                        ${user.email}
-                    </a>
-                </button>
-                <ul class="dropdown__menu">
-                    <li class="dropdown__item">
-                    <a href="./my-course.html" class="dropdown__link">My Course</a>
-                    </li>
-                    <li class="dropdown__item">
-                    <a href="/" class="dropdown__link dropdown__logout">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </p>
-        `
-    } else {
-        Array.from(btnForm).forEach(btn => {
-            btn.style.display = "block";
-        })
-    }
-
-}
 
 const renderCourseIndex = (course) => {
     coursesContainer.forEach(container => {
@@ -234,7 +198,7 @@ function handleLogout() {
 }
 
 renderUser();
-renderCourseIndex(courseList)
+renderCourseIndex(courseListIndex)
 renderCourseDetail();
 handleLogout();
 

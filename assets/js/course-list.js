@@ -173,6 +173,9 @@ const renderCourses = (course) => {
 
         coursesContainer.appendChild(courseItem)
     });
+
+    handleRenderCourseDetail();
+
 }
 
 inputSearch.addEventListener("keydown", (event) => {
@@ -342,4 +345,3 @@ function handleRenderCourseDetail() {
 }
 
 renderCourses(courseList);
-handleRenderCourseDetail();

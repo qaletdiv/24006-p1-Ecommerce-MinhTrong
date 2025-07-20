@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-function load(selector, path) {
+function load(selector, path, callback) {
     const cached = localStorage.getItem(path);
     if (cached) {
         document.querySelector(selector).innerHTML = cached;
@@ -14,6 +14,14 @@ function load(selector, path) {
                 document.querySelector(selector).innerHTML = html;
                 localStorage.setItem(path, html);
             }
+
+            if (typeof callback === "function") {
+                callback();
+            }
+
+            document.dispatchEvent(new CustomEvent("template-loaded", {
+                detail: { selector, path }
+            }));
         });
 }
 

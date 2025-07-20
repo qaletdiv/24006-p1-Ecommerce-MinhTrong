@@ -106,7 +106,11 @@ const renderUser = () => {
         userContainer.innerHTML = `
         <p class="top-actions__user-email">
             <div class="dropdown">
-                <button class="dropdown__toggle">${user.email}</button>
+                <button class="dropdown__toggle">
+                    <a href="./profile.html">
+                        ${user.email}
+                    </a>
+                </button>
                 <ul class="dropdown__menu">
                     <li class="dropdown__item">
                     <a href="./my-course.html" class="dropdown__link">My Course</a>

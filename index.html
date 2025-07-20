@@ -67,6 +67,20 @@
                     })
                 }
 
+                function handleLogout() {
+                    const dropdownLogout = document.querySelector(".dropdown__logout")
+
+                    dropdownLogout.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        localStorage.removeItem("currentUser");
+                        localStorage.removeItem("user")
+                        window.location.href = "/";
+                    })
+                }
+
+                handleLogout();
+
+
             }
 
             renderUser()

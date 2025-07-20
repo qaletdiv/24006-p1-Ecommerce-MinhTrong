@@ -91,7 +91,6 @@ const levels = [
 
 const coursesContainer = document.querySelectorAll(".row.row-cols-3");
 const signInBtn = document.getElementsByClassName("top-actions__user-btn")
-// const btnForm = document.getElementsByClassName("top-actions__user-btn")
 const navbarLink = document.querySelectorAll(".navbar__link");
 
 const renderCourseIndex = (course) => {
@@ -185,19 +184,20 @@ function renderCourseDetail() {
 }
 
 function handleLogout() {
-    const dropdownLogout = document.querySelector(".dropdown__logout")
+    const dropdownLogout = document.querySelector(".dropdown__logout");
 
-    dropdownLogout.addEventListener("click", (e) => {
-        e.preventDefault();
-        localStorage.removeItem("currentUser");
-        localStorage.removeItem("user")
-        window.location.href = "/";
-    })
-
-
+    if (dropdownLogout) {
+        dropdownLogout.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("currentUser");
+            localStorage.removeItem("user");
+            window.location.href = "/";
+        });
+    } else {
+        console.warn("Không tìm thấy nút logout. Có thể DOM chưa được render.");
+    }
 }
 
-renderUser();
 renderCourseIndex(courseListIndex)
 renderCourseDetail();
 handleLogout();

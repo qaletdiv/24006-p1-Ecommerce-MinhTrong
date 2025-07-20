@@ -38,6 +38,7 @@
                 display: flex;
                 align-items: center;
                 margin-top: 20px;
+                gap: 20px;
 
                 @include abstrasts.screen(sm) {
                     flex-direction: column;

@@ -112,6 +112,18 @@ if (couseId) {
             courseDetail.classList.add(color.colorClass);
         }
 
+        const hasDiscount = course.isFree || course.sale;
+
+        let priceHTML = `
+        <span class="price ${hasDiscount ? "price-line" : ""}">${course.price}</span>
+    `
+
+        if (course.isFree) {
+            priceHTML += `<span class="free">Free</span>`;
+        } else if (course.sale) {
+            priceHTML += `<span class="sale">${course.sale}</span></span>`;
+        }
+
 
         courseDetailInfo.innerHTML = '';
         courseDetailInfo.innerHTML = `
@@ -146,16 +158,13 @@ if (couseId) {
 
                 <div class="course__detail-info__content-btn">
                     <button class="course__detail-btn">
-                        Get Started
+                        <a href="./checkout-page.html">
+                            Get Started
+                        </a>
                     </button>
 
                     <div>
-                        <span class="course__detail-btn__price">
-                            ₫867,000
-                        </span>
-                        <span class="price-line">
-                            ₫5,227,000
-                        </span>
+                        ${priceHTML}
                     </div>
                 </div>
 

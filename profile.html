@@ -72,112 +72,186 @@
         })
     </script>
 
-    <section class="profile">
-        <div class="container">
-            <div class="profile__header">
-                <div class="profile__header-box">
-                    <div class="profile__avatar">
-                        <img src="./assets/img/avatar/avatar.jpg" alt="avatar" />
-                    </div>
-                    <div class="profile__details">
-                        <h1 class="profile__name">Nguyễn Văn A</h1>
-                        <p class="profile__email">nguyenvana@example.com</p>
-                        <button class="btn btn--primary profile__btn">Cập nhật hồ sơ</button>
-                    </div>
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <a href="./index.html">
+                    <img src="./assets/icons/logo.svg" alt="">
+                </a>
+                <h2 class="sidebar__logo-title">EduPress</h2>
+
+            </div>
+
+            <div class="sidebar__user">
+
+                <div class="sidebar__user-avatar">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44e1879c-9ff1-493f-8042-23f8a3be2184.png"
+                        alt="User profile picture" width="100%" height="100%">
                 </div>
-                <div class="profile__info">
-                    <div class="profile__info-item">
-                        <span class="profile__info-label">Khóa học</span>
-                        <span class="profile__info-value">15</span>
+
+                <div class="sidebar__user-info">
+                    <p class="sidebar__user-title">Nguyễn Văn A</p>
+                    <p class="sidebar__user-title">nguyenvana@email.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__menu-item">
+                    <a href="./index.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Home
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="./courses.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Course
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="./blog.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Blog
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="contact.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Contact
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="./my-course.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        My Course
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar__btn">
+                <button class="btn btn--primary sidebar__btn-group">
+                    <a href="./sign-in.html">
+                        Sign In
+                    </a>
+                </button>
+                <button class="btn btn--primary sidebar__btn-group">
+                    <a href="./sign-up.html">
+                        Sign Up
+                    </a>
+                </button>
+            </div>
+        </nav>
+    </aside>
+
+    <main>
+        <section class="profile">
+            <div class="container">
+                <div class="profile__header">
+                    <div class="profile__header-box">
+                        <div class="profile__avatar">
+                            <img src="./assets/img/avatar/avatar.jpg" alt="avatar" />
+                        </div>
+                        <div class="profile__details">
+                            <h1 class="profile__name">Nguyễn Văn A</h1>
+                            <p class="profile__email">nguyenvana@example.com</p>
+                            <button class="btn btn--primary profile__btn">Cập nhật hồ sơ</button>
+                        </div>
                     </div>
-                    <div class="profile__info-item">
-                        <span class="profile__info-label">Hoàn thành</span>
-                        <span class="profile__info-value">8</span>
-                        </span>
+                    <div class="profile__info">
                         <div class="profile__info-item">
-                            <span class="profile__info-label">Điểm số</span>
-                            <span class="profile__info-value">9.5</span>
+                            <span class="profile__info-label">Khóa học</span>
+                            <span class="profile__info-value">15</span>
                         </div>
                         <div class="profile__info-item">
-                            <span class="profile__info-label">Thời gian học</span>
-                            <span class="profile__info-value">120h</span>
+                            <span class="profile__info-label">Hoàn thành</span>
+                            <span class="profile__info-value">8</span>
+                            </span>
+                            <div class="profile__info-item">
+                                <span class="profile__info-label">Điểm số</span>
+                                <span class="profile__info-value">9.5</span>
+                            </div>
+                            <div class="profile__info-item">
+                                <span class="profile__info-label">Thời gian học</span>
+                                <span class="profile__info-value">120h</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- COURSES SECTION -->
-    <section class="courses">
-        <div class="container">
-            <h2 class="heading">Khóa học của tôi</h2>
-            <div class="courses__list">
-                <!-- Course Item 1 -->
-                <div class="courses__card">
-                    <div class="courses__image">
-                        <img src="./assets/img/course/course-item-1.png"
-                            alt="Khóa học lập trình web với HTML, CSS, JavaScript hiển thị trên màn hình máy tính" />
-                    </div>
-                    <div class="courses__content">
-                        <h3 class="courses__title">Lập trình Web cơ bản</h3>
-                        <p class="courses__instructor">Giảng viên: Trần Thị B</p>
-                        <div class="courses__progress">
-                            <div class="courses__progress-bar" style="width: 65%"></div>
+        <!-- COURSES SECTION -->
+        <section class="courses">
+            <div class="container">
+                <h2 class="heading">Khóa học của tôi</h2>
+                <div class="courses__list">
+                    <!-- Course Item 1 -->
+                    <div class="courses__card">
+                        <div class="courses__image">
+                            <img src="./assets/img/course/course-item-1.png"
+                                alt="Khóa học lập trình web với HTML, CSS, JavaScript hiển thị trên màn hình máy tính" />
                         </div>
-                        <div class="courses__meta">
-                            <span class="courses__progress-text">65% hoàn thành</span>
-                            <span class="courses__status">Đang học</span>
+                        <div class="courses__content">
+                            <h3 class="courses__title">Lập trình Web cơ bản</h3>
+                            <p class="courses__instructor">Giảng viên: Trần Thị B</p>
+                            <div class="courses__progress">
+                                <div class="courses__progress-bar" style="width: 65%"></div>
+                            </div>
+                            <div class="courses__meta">
+                                <span class="courses__progress-text">65% hoàn thành</span>
+                                <span class="courses__status">Đang học</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Course Item 2 -->
-                <div class="courses__card">
-                    <div class="courses__image">
-                        <img src="./assets/img/course/course-item-2.png"
-                            alt="React JS ứng dụng thương mại điện tử với nhiều component UI" />
-                    </div>
-                    <div class="courses__content">
-                        <h3 class="courses__title">React JS nâng cao</h3>
-                        <p class="courses__instructor">Giảng viên: Lê Văn C</p>
-                        <div class="courses__progress">
-                            <div class="courses__progress-bar" style="width: 30%"></div>
+                    <!-- Course Item 2 -->
+                    <div class="courses__card">
+                        <div class="courses__image">
+                            <img src="./assets/img/course/course-item-2.png"
+                                alt="React JS ứng dụng thương mại điện tử với nhiều component UI" />
                         </div>
-                        <div class="courses__meta">
-                            <span class="courses__progress-text">30% hoàn thành</span>
-                            <span class="courses__status">Đang học</span>
+                        <div class="courses__content">
+                            <h3 class="courses__title">React JS nâng cao</h3>
+                            <p class="courses__instructor">Giảng viên: Lê Văn C</p>
+                            <div class="courses__progress">
+                                <div class="courses__progress-bar" style="width: 30%"></div>
+                            </div>
+                            <div class="courses__meta">
+                                <span class="courses__progress-text">30% hoàn thành</span>
+                                <span class="courses__status">Đang học</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Course Item 3 -->
-                <div class="courses__card">
-                    <div class="courses__image">
-                        <img src="./assets/img/course/course-item-3.png"
-                            alt="Node.js REST API với MongoDB trên nền tảng đám mây" />
-                    </div>
-                    <div class="courses__content">
-                        <h3 class="courses__title">Node.js Backend</h3>
-                        <p class="courses__instructor">Giảng viên: Phạm Thị D</p>
-                        <div class="courses__progress">
-                            <div class="courses__progress-bar" style="width: 100%"></div>
+                    <!-- Course Item 3 -->
+                    <div class="courses__card">
+                        <div class="courses__image">
+                            <img src="./assets/img/course/course-item-3.png"
+                                alt="Node.js REST API với MongoDB trên nền tảng đám mây" />
                         </div>
-                        <div class="courses__meta">
-                            <span class="courses__progress-text">100% hoàn thành</span>
-                            <span class="courses__status">Hoàn thành</span>
+                        <div class="courses__content">
+                            <h3 class="courses__title">Node.js Backend</h3>
+                            <p class="courses__instructor">Giảng viên: Phạm Thị D</p>
+                            <div class="courses__progress">
+                                <div class="courses__progress-bar" style="width: 100%"></div>
+                            </div>
+                            <div class="courses__meta">
+                                <span class="courses__progress-text">100% hoàn thành</span>
+                                <span class="courses__status">Hoàn thành</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="footer"></footer>
     <script>
         load("#footer", "./template/footer.html")
     </script>
     <script src="./assets/js/profile.js"></script>
+    <script src="./assets/js/sidebar.js"></script>
+
 
 </body>
 

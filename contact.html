@@ -73,6 +73,76 @@
         })
     </script>
 
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <a href="./index.html">
+                    <img src="./assets/icons/logo.svg" alt="">
+                </a>
+                <h2 class="sidebar__logo-title">EduPress</h2>
+
+            </div>
+
+            <div class="sidebar__user">
+
+                <div class="sidebar__user-avatar">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44e1879c-9ff1-493f-8042-23f8a3be2184.png"
+                        alt="User profile picture" width="100%" height="100%">
+                </div>
+
+                <div class="sidebar__user-info">
+                    <p class="sidebar__user-title">Nguyễn Văn A</p>
+                    <p class="sidebar__user-title">nguyenvana@email.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__menu-item">
+                    <a href="./index.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Home
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="./courses.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Course
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="./blog.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Blog
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="contact.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        Contact
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="./my-course.html" class="sidebar__menu-link sidebar__menu-link--active">
+                        My Course
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar__btn">
+                <button class="btn btn--primary sidebar__btn-group">
+                    <a href="./sign-in.html">
+                        Sign In
+                    </a>
+                </button>
+                <button class="btn btn--primary sidebar__btn-group">
+                    <a href="./sign-up.html">
+                        Sign Up
+                    </a>
+                </button>
+            </div>
+        </nav>
+    </aside>
+
     <!-- MAIN -->
     <main>
         <section class="contact">
@@ -142,6 +212,8 @@
     <script>
         load("#footer", "./template/footer.html")
     </script>
+    <script src="./assets/js/sidebar.js"></script>
+
 
 </body>
 

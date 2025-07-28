@@ -6,6 +6,7 @@ const courseList = [
         title: "HTML CSS từ Zero đến Hero",
         image: "./assets/img/course/course-item4.png",
         price: "$29.0",
+        isFree: true,
         link: "./course-detail.html"
     },
     {
@@ -14,8 +15,8 @@ const courseList = [
         levelsId: 2,
         title: "HTML CSS Pro",
         image: "./assets/img/course/course-item-1.png",
-        price: "$29.0",
-        sale: "$49.0",
+        sale: "$29.0",
+        price: "$49.0",
         isFree: false,
         link: "./course-detail.html"
     },
@@ -26,8 +27,7 @@ const courseList = [
         title: "Lập Trình Javascript Cơ Bản",
         image: "./assets/img/course/course-item-5.png",
         price: "$29.0",
-        isFree: false,
-        sale: "$49.0",
+        isFree: true,
         link: "./course-detail.html"
     },
     {
@@ -37,8 +37,7 @@ const courseList = [
         title: "Lập Trình Javascript Nâng Cao",
         image: "./assets/img/course/course-item-6.png",
         price: "$29.0",
-        isFree: false,
-        sale: "$49.0",
+        isFree: true,
         link: "./course-detail.html"
     },
     {
@@ -47,8 +46,9 @@ const courseList = [
         levelsId: 3,
         title: "Javascript Pro",
         image: "./assets/img/course/course-item-7.png",
-        price: "$29.0",
-        isFree: true,
+        price: "$49.0",
+        sale: "$29.0",
+        isFree: false,
         link: "./course-detail.html"
     },
     {
@@ -58,7 +58,7 @@ const courseList = [
         title: "Ngôn Ngữ Sass",
         image: "./assets/img/course/course-item-8.png",
         price: "$29.0",
-        isFree: true,
+        isFree: false,
         link: "./course-detail.html"
     },
 ]

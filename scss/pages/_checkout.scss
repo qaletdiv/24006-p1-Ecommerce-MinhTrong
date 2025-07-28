@@ -1,5 +1,5 @@
 .checkout {
-    margin: 0 auto;
+    margin: 65px auto 0px;
     padding: 2rem 1rem;
     display: grid;
     grid-template-columns: 1fr 350px;
@@ -372,5 +372,9 @@
                 }
             }
         }
+    }
+
+    &__unchecked {
+        display: none;
     }
 }

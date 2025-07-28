@@ -44,12 +44,15 @@
                     userContainer.innerHTML = `
                     <p class="top-actions__user-email">
                         <div class="dropdown">
-                            <button class="dropdown__toggle">
+                            <h3 class="dropdown__user">
                                 <a href="./profile.html">
                                     ${user.email}
                                 </a>
-                            </button>
+                            </h3>
                             <ul class="dropdown__menu">
+                                <li class="dropdown__item">
+                                <a href="./profile.html" class="dropdown__link">My Profile</a>
+                                </li>
                                 <li class="dropdown__item">
                                 <a href="./my-course.html" class="dropdown__link">My Course</a>
                                 </li>
@@ -66,6 +69,17 @@
                     })
                 }
 
+                function handleLogout() {
+                    const dropdownLogout = document.querySelector(".dropdown__logout")
+
+                    dropdownLogout.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        localStorage.removeItem("currentUser");
+                        window.location.href = "/sign-in.html";
+                    })
+                }
+
+                handleLogout();
             }
 
             renderUser()
@@ -164,20 +178,20 @@
                     Phương thức thanh toán
                 </h2>
                 <div class="checkout__main-section-list">
-                    <div class="checkout__main-section-list-item checkout__main-section-list-item--selected">
+                    <div class="checkout__main-section-list-item ">
                         <img src="./assets/img/checkout/credit-card.png" alt="Credit card payment method">
                         <div class="checkout__main-section-list-item-label">Thẻ tín dụng/ghi nợ</div>
-                        <img src="./assets/icons/check-icon.svg" alt="">
+                        <img src="./assets/icons/check-icon.svg" alt="" class="checkout__unchecked">
                     </div>
                     <div class="checkout__main-section-list-item">
                         <img src="./assets/img/checkout/payment.png" alt="Bank transfer payment method">
                         <div class="checkout__main-section-list-item-label">Chuyển khoản ngân hàng</div>
-                        <img src="./assets/icons/check-icon.svg" alt="">
+                        <img src="./assets/icons/check-icon.svg" alt="" class="checkout__unchecked">
                     </div>
                     <div class="checkout__main-section-list-item">
                         <img src="./assets/img/checkout/momo.png    " alt="Momo e-wallet payment method">
                         <div class="checkout__main-section-list-item-label">Ví điện tử Momo</div>
-                        <img src="./assets/icons/check-icon.svg" alt="">
+                        <img src="./assets/icons/check-icon.svg" alt="" class="checkout__unchecked">
                     </div>
                 </div>
             </section>
@@ -190,30 +204,32 @@
                     </svg>
                     Thông tin thanh toán
                 </h2>
-                <form class="checkout__main-section-form">
+                <form id="checkout-form" class="checkout__main-section-form">
                     <div class="checkout__main-section-form-group">
                         <label for="firstName">Họ</label>
                         <input type="text" id="firstName" placeholder="Nhập họ của bạn">
                     </div>
                     <div class="checkout__main-section-form-group">
                         <label for="lastName">Tên</label>
-                        <input type="text" id="lastName" placeholder="Nhập tên của bạn">
+                        <input type="text" id="lastName" placeholder="Nhập tên của bạn" required>
                     </div>
                     <div class="checkout__main-section-form-group checkout__main-section-form-group--full">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Nhập email của bạn">
+                        <input type="email" id="email" placeholder="Nhập email của bạn" required
+                            pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+                            title="Email phải đúng định dạng và có đuôi @gmail.com">
                     </div>
                     <div class="checkout__main-section-form-group checkout__main-section-form-group--full">
                         <label for="phone">Số điện thoại</label>
-                        <input type="tel" id="phone" placeholder="Nhập số điện thoại của bạn">
+                        <input type="tel" id="phone" placeholder="Nhập số điện thoại của bạn" required>
                     </div>
                     <div class="checkout__main-section-form-group checkout__main-section-form-group--full">
                         <label for="address">Địa chỉ</label>
-                        <input type="text" id="address" placeholder="Nhập địa chỉ của bạn">
+                        <input type="text" id="address" placeholder="Nhập địa chỉ của bạn" required>
                     </div>
                     <div class="checkout__main-section-form-group">
                         <label for="city">Thành phố</label>
-                        <select id="city">
+                        <select id="city" required>
                             <option value="">Chọn thành phố</option>
                             <option value="hanoi">Hà Nội</option>
                             <option value="hcm">TP. Hồ Chí Minh</option>
@@ -222,7 +238,7 @@
                     </div>
                     <div class="checkout__main-section-form-group">
                         <label for="district">Quận/Huyện</label>
-                        <input type="text" id="district" placeholder="Nhập quận/huyện">
+                        <input type="text" id="district" placeholder="Nhập quận/huyện" required>
                     </div>
                 </form>
             </section>
@@ -252,28 +268,29 @@
                             alt="Course thumbnail for React Advanced Course">
                     </div>
                     <div class="checkout__sidebar-summary-course-info">
-                        <div class="checkout__sidebar-summary-course-info-name">React Advanced - Xây dựng ứng dụng
-                            chuyên nghiệp</div>
-                        <div class="checkout__sidebar-summary-course-info-instructor">Giảng viên: Nguyễn Văn A</div>
+                        <h2 class="checkout__sidebar-summary-course-info-name">React Advanced - Xây dựng ứng dụng
+                            chuyên nghiệp</h2>
+                        <p class="checkout__sidebar-summary-course-info-instructor">Giảng viên: Nguyễn Văn A</p>
                     </div>
                 </div>
 
-                <div class="checkout__sidebar-summary-price">
+                <div id="price" class="checkout__sidebar-summary-price">
                     <span>Giá gốc:</span>
                     <span>3.500.000₫</span>
                 </div>
 
-                <div class="checkout__sidebar-summary-price">
+                <div id="discount" class="checkout__sidebar-summary-price">
                     <span>Giảm giá:</span>
                     <span>-500.000₫</span>
                 </div>
 
-                <div class="checkout__sidebar-summary-price checkout__sidebar-summary-price--total">
+                <div id="total" class="checkout__sidebar-summary-price checkout__sidebar-summary-price--total">
                     <span>Tổng cộng:</span>
                     <span>3.000.000₫</span>
                 </div>
 
-                <button type="button" class="checkout__sidebar-summary-button">Hoàn tất thanh toán</button>
+                <button type="submit" form="checkout-form" class="checkout__sidebar-summary-button">Hoàn tất thanh
+                    toán</button>
 
                 <div class="checkout__sidebar-summary-guarantee">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -302,11 +319,19 @@
         </aside>
     </main>
 
+    <div id="popup" class="popup">
+        <div class="popup__content">
+            <p>Thanh toán thành công!</p>
+            <button class="popup-btn">Xem Khóa Học</button>
+        </div>
+    </div>
+
     <footer id="footer"></footer>
     <script>
         load("#footer", "./template/footer.html")
     </script>
     <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/checkout.js"></script>
 
 
 </body>

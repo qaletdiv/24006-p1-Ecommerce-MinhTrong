@@ -105,5 +105,10 @@ input::placeholder {
 
 .backgroundSass {
     background: radial-gradient(100% 100% at 50% 50%, #f9cbe1 0%, #e863a5 50%, #de3889 100%);
+}
 
+.button-disabled {
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.6;
 }

@@ -1,0 +1,42 @@
+.popup {
+    display: none; // ẩn mặc định
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    &.popup-open {
+        display: flex; // hiện popup khi thêm class popup-open
+    }
+
+    &__content {
+        background: white;
+        padding: 20px 40px;
+        border-radius: 10px;
+        text-align: center;
+
+        p {
+            margin: 20px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.6s ease;
+
+            &:hover {
+                background: #3a7bd5;
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 // Lấy thẻ form
 const form = document.getElementById('sign-up-form');
 
+
 const handleSubmitForm = (e) => {
     e.preventDefault();
 

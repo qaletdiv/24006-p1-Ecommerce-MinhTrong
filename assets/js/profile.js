@@ -14,16 +14,8 @@ const renderProfile = () => {
                 ${informationUser.firstName} ${informationUser.lastName}
             </h1>
             <p class="profile__email">${informationUser.email}</p>
-            <button class="btn btn--primary profile__btn">Cập nhật hồ sơ</button>
         </div>
     `
-
-    const profileBtn = document.querySelector(".profile__btn")
-
-    profileBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.location.href = "./edit-profile.html";
-    })
 }
 
 renderProfile()

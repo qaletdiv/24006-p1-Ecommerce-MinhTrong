@@ -190,7 +190,6 @@ function handleLogout() {
         dropdownLogout.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.removeItem("currentUser");
-            localStorage.removeItem("user");
             window.location.href = "/";
         });
     } else {

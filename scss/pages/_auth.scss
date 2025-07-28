@@ -101,13 +101,26 @@
         line-height: 146.667%;
     }
 
+    &__error {
+        display: none;
+        margin-top: 10px;
+        text-align: left;
+        background-color: #ffe5e8;
+        border: 1px solid #ff424f;
+        padding: 10px 20px;
+        font-size: 14px;
+
+        &.open__error {
+            display: block;
+        }
+    }
+
     &__message {
         margin-top: 30px;
     }
 
     &__form {
         width: 100%;
-        margin-top: 30px;
 
         &-forgot {
             margin-top: 10px;

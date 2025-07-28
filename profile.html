@@ -44,12 +44,15 @@
                     userContainer.innerHTML = `
                     <p class="top-actions__user-email">
                         <div class="dropdown">
-                            <button class="dropdown__toggle">
+                            <h3 class="dropdown__user">
                                 <a href="./profile.html">
                                     ${user.email}
                                 </a>
-                            </button>
+                            </h3>
                             <ul class="dropdown__menu">
+                                <li class="dropdown__item">
+                                <a href="./profile.html" class="dropdown__link">My Profile</a>
+                                </li>
                                 <li class="dropdown__item">
                                 <a href="./my-course.html" class="dropdown__link">My Course</a>
                                 </li>
@@ -66,6 +69,17 @@
                     })
                 }
 
+                function handleLogout() {
+                    const dropdownLogout = document.querySelector(".dropdown__logout")
+
+                    dropdownLogout.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        localStorage.removeItem("currentUser");
+                        window.location.href = "/sign-in.html";
+                    })
+                }
+
+                handleLogout();
             }
 
             renderUser()
@@ -153,7 +167,6 @@
                         <div class="profile__details">
                             <h1 class="profile__name">Nguyễn Văn A</h1>
                             <p class="profile__email">nguyenvana@example.com</p>
-                            <button class="btn btn--primary profile__btn">Cập nhật hồ sơ</button>
                         </div>
                     </div>
                     <div class="profile__info">

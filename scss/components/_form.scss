@@ -16,7 +16,7 @@
         }
     }
 
-    &__group:has(:inva):has(&__input:not(:placeholder-shown)) {
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
         .form__text-input {
             border-color: #ff0000;
         }

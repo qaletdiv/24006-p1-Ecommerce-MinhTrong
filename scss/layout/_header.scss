@@ -8,8 +8,6 @@
 
 
 .top-bar {
-    @extend %flexItemsCenter;
-    padding: 25px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,19 +15,34 @@
     width: 100vw;
     z-index: 1000;
     background-color: #fff;
+    padding: 25px 20px;
+
+    .top-bar__container {
+        @extend %flexItemsCenter;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+    }
 
     @include abstrasts.screen(xl) {
-        justify-content: space-between;
+        .top-bar__container {
+            justify-content: space-between;
+        }
     }
 
     @include abstrasts.screen(lg) {
-        justify-content: space-between;
+        .top-bar__container {
+            justify-content: space-between;
+        }
     }
 
     @include abstrasts.screen(md) {
-        justify-content: space-between;
+        .top-bar__container {
+            justify-content: space-between;
+        }
     }
 }
+
 
 .navbar {
     margin-left: 144px;

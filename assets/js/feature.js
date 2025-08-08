@@ -1,78 +1,67 @@
-const courseListIndex = [
+const courseList = [
     {
         id: 1,
-        teacherId: 1,
-        levelsId: 1,
+        teacher: "Kenny White",
+        level: "Beginner",
         title: "HTML CSS từ Zero đến Hero",
         image: "./assets/img/course/course-item4.png",
         price: "$29.0",
+        isFree: true,
         link: "./course-detail.html"
     },
     {
         id: 2,
-        teacherId: 2,
-        levelsId: 2,
+        teacher: "John Doe",
+        level: "Intermediate",
         title: "HTML CSS Pro",
         image: "./assets/img/course/course-item-1.png",
-        price: "$29.0",
-        sale: "$49.0",
+        sale: "$29.0",
+        price: "$49.0",
         isFree: false,
         link: "./course-detail.html"
     },
     {
         id: 3,
-        teacherId: 1,
-        levelsId: 1,
+        teacher: "Kenny White",
+        level: "Beginner",
         title: "Lập Trình Javascript Cơ Bản",
         image: "./assets/img/course/course-item-5.png",
         price: "$29.0",
-        isFree: false,
-        sale: "$49.0",
+        isFree: true,
         link: "./course-detail.html"
     },
     {
         id: 4,
-        teacherId: 2,
-        levelsId: 2,
+        teacher: "John Doe",
+        level: "Intermediate",
         title: "Lập Trình Javascript Nâng Cao",
         image: "./assets/img/course/course-item-6.png",
         price: "$29.0",
-        isFree: false,
-        sale: "$49.0",
+        isFree: true,
         link: "./course-detail.html"
     },
     {
         id: 5,
-        teacherId: 1,
-        levelsId: 3,
+        teacher: "Kenny White",
+        level: "Expert",
         title: "Javascript Pro",
         image: "./assets/img/course/course-item-7.png",
-        price: "$29.0",
-        isFree: true,
+        price: "$49.0",
+        sale: "$29.0",
+        isFree: false,
         link: "./course-detail.html"
     },
     {
         id: 6,
-        teacherId: 2,
-        levelsId: 3,
+        teacher: "John Doe",
+        level: "Expert",
         title: "Ngôn Ngữ Sass",
         image: "./assets/img/course/course-item-8.png",
         price: "$29.0",
-        isFree: true,
+        isFree: false,
         link: "./course-detail.html"
     },
-];
-
-const teachers = [
-    {
-        id: 1,
-        name: "Kenny White",
-    },
-    {
-        id: 2,
-        name: "John Doe",
-    },
-];
+]
 
 const levels = [
     {
@@ -89,18 +78,18 @@ const levels = [
     },
 ]
 
-const coursesContainer = document.querySelectorAll(".row.row-cols-3");
+const coursesContainer = document.querySelectorAll(".feature__list");
 const signInBtn = document.getElementsByClassName("top-actions__user-btn")
 const navbarLink = document.querySelectorAll(".navbar__link");
+
+console.log(coursesContainer);
+
 
 const renderCourseIndex = (course) => {
     coursesContainer.forEach(container => {
         container.innerHTML = "";
 
         course.forEach((item, index) => {
-            const teacher = teachers.find(teacher => teacher.id === item.teacherId) || "Unknown Teacher";
-
-            const level = levels.find(level => level.id === item.levelsId) || "Unknown Level";
 
             const hasDiscount = item.isFree || item.sale;
 
@@ -123,7 +112,7 @@ const renderCourseIndex = (course) => {
                 </a>
 
                 <div class="feature__item-info">
-                    <p>by <strong>${teacher.name}</strong></p>
+                    <p>by <strong>${item.teacher}</strong></p>
                     <a href="${item.link}" class="course__link" data-id="${item.id}">
                         <h3 class="feature__item-info__title">
                             ${item.title}
@@ -151,7 +140,7 @@ const renderCourseIndex = (course) => {
 
                         <div class="feature__item-info__plan-time">
                             <img src="./assets/icons/levels.svg" alt="" class="thumb">
-                            <span>${level.name}</span>
+                            <span>${item.level}</span>
                         </div>
                     </div>
 
@@ -197,7 +186,7 @@ function handleLogout() {
     }
 }
 
-renderCourseIndex(courseListIndex)
+renderCourseIndex(courseList)
 renderCourseDetail();
 handleLogout();
 

@@ -7,11 +7,11 @@
     <title>Document</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <!-- <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="/site.webmanifest" /> -->
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -176,16 +176,36 @@
             </section>
         </section>
 
+        <!-- My Courses -->
+        <section class="my__course home__container">
+            <div class="container">
+                <div class="home__heading">
+                    <h2 class="home__heading-title">My Courses</h2>
+                    <button class="btn home__heading-btn">
+                        <a href="./my-course.html">
+                            All My Courses
+                        </a>
+                    </button>
+                </div>
+
+                <p class="course__empty">Hiện tại bạn chưa có đăng ký khóa học nào. Vui lý đăng ký khóa học ngay!</p>
+
+                <div class="my__course-list row row-cols-3 gy-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
+
+                </div>
+            </div>
+        </section>
+
 
         <!-- Feature Courses -->
-        <section class="home__container">
+        <section class="feature__courses home__container">
             <div class="container">
                 <div class="home__heading">
                     <h2 class="home__heading-title">Top Categories</h2>
                     <button class="btn home__heading-btn">All Categories</button>
                 </div>
 
-                <div class="row row-cols-3 gy-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
+                <div class="feature__list row row-cols-3 gy-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
                     <div class="col">
                         <article class="feature__item">
                             <a href="./course-detail.html" class="course__link" data-id="1">
@@ -414,41 +434,6 @@
             </div>
         </section>
 
-        <!-- Stats -->
-        <section class="home__container">
-            <div class="container">
-                <div class="row row-cols-4 gy-3  row-cols-md-2 row-cols-sm-1">
-                    <div class="col">
-                        <article class="stats__item">
-                            <h3>25K+</h3>
-                            <p>Active Students</p>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="stats__item">
-                            <h3>25K+</h3>
-                            <p>Active Students</p>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="stats__item">
-                            <h3>25K+</h3>
-                            <p>Active Students</p>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="stats__item">
-                            <h3>25K+</h3>
-                            <p>Active Students</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Promotion -->
         <section class="home__container">
             <div class="container">
@@ -575,140 +560,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- CTA -->
-        <section class="home__container">
-            <div class="container">
-                <article class="cta">
-                    <div class="cta__info">
-                        <div class="cta__info-img">
-                            <img src="./assets/icons/user.svg" alt="">
-                        </div>
-                        <p>Let’s Start With Academy LMS</p>
-                    </div>
-
-                    <div class="cta__btn">
-                        <button class="btn--outline cta__btn-outline">I’m a student</button>
-                        <button class="btn cta__btn-inner">Become an Instructor</button>
-                </article>
-            </div>
-        </section>
-
-        <!-- Feature Courses -->
-        <section class="home__container">
-            <div class="container">
-                <div class="home__heading">
-                    <h2 class="home__heading-title">Latest articles</h2>
-                    <button class="btn home__heading-btn">All Categories</button>
-                </div>
-
-                <div class="row row-cols-3 gy-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
-                    <div class="col">
-                        <article class="feature__item">
-                            <img src="./assets/img/course/course-item-2.png" alt="" class="feature__item-img">
-
-                            <div class="feature__item-info">
-                                <p>by <strong>Determined-Poitras</strong></p>
-                                <h3 class="feature__item-info__title">Xây Dựng Website Với ReactJS</h3>
-
-                                <div class="feature__item-info__plan">
-                                    <div class="feature__item-info__plan-time">
-                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
-                                        <span>2Weeks</span>
-                                    </div>
-
-                                    <div class="feature__item-info__plan-time">
-                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
-                                        <span>156 students</span>
-                                    </div>
-                                </div>
-
-                                <div class="line"></div>
-
-                                <div class="feature__item-info__meta">
-                                    <div class="feature__item-info__meta-price">
-                                        <span class="price price-line">$29.0</span>
-                                        <span class="free">Free</span>
-                                    </div>
-
-                                    <a class="feature__item-info__meta-link" href="./course-detail.html">View More</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="feature__item">
-                            <img src="./assets/img/course/course-item-7.png" alt="" class="feature__item-img">
-
-                            <div class="feature__item-info">
-                                <p>by <strong>Determined-Poitras</strong></p>
-                                <h3 class="feature__item-info__title">Javascript Pro</h3>
-
-                                <div class="feature__item-info__plan">
-                                    <div class="feature__item-info__plan-time">
-                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
-                                        <span>2Weeks</span>
-                                    </div>
-
-                                    <div class="feature__item-info__plan-time">
-                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
-                                        <span>156 students</span>
-                                    </div>
-                                </div>
-
-                                <div class="line"></div>
-
-                                <div class="feature__item-info__meta">
-                                    <div class="feature__item-info__meta-price">
-                                        <span class="price price-line">$49.0</span>
-                                        <span class="sale">$19.0</span>
-                                    </div>
-
-                                    <a class="feature__item-info__meta-link" href="./course-detail.html">View More</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="feature__item">
-                            <img src="./assets/img/course/course-item-8.png" alt="" class="feature__item-img">
-
-                            <div class="feature__item-info">
-                                <p>by <strong>Determined-Poitras</strong></p>
-                                <h3 class="feature__item-info__title">Ngôn Ngữ Sass</h3>
-
-                                <div class="feature__item-info__plan">
-                                    <div class="feature__item-info__plan-time">
-                                        <img src="./assets/img/feature/feature-icon-1.svg" alt="" class="thumb">
-                                        <span>2Weeks</span>
-                                    </div>
-
-                                    <div class="feature__item-info__plan-time">
-                                        <img src="./assets/img/feature/feature-icon-2.svg" alt="" class="thumb">
-                                        <span>156 students</span>
-                                    </div>
-                                </div>
-
-                                <div class="line"></div>
-
-                                <div class="feature__item-info__meta">
-                                    <div class="feature__item-info__meta-price">
-                                        <span class="price price-line">$49.0</span>
-                                        <span class="sale">$19.0</span>
-                                    </div>
-
-                                    <a class="feature__item-info__meta-link" href="./course-detail.html">View More</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer id="footer"></footer>
@@ -718,6 +569,7 @@
 
     <script src="./assets/js/feature.js"></script>
     <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/my-course.js"></script>
 </body>
 
 </html>

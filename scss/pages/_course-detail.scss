@@ -212,3 +212,25 @@
 
     }
 }
+
+.course__progress {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: transparent;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    p {
+        margin-top: 10px;
+        font-weight: 500;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+}

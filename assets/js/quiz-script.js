@@ -104,7 +104,7 @@ function submitQuiz() {
 
         alert(`Bạn đã hoàn thành bài học`)
 
-        window.location.href = "./index.html";
+        window.location.href = "./course-video.html";
     })
 }
 

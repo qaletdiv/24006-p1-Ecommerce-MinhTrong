@@ -154,68 +154,17 @@
             </div>
         </nav>
     </aside>
-
-    <!-- COURSES SECTION -->
-    <section class="courses">
+    <!-- My Courses -->
+    <section class="my__course home__container">
         <div class="container">
-            <h2 class="heading">Khóa học của tôi</h2>
-            <div class="courses__list">
-                <!-- Course Item 1 -->
-                <div class="courses__card">
-                    <div class="courses__image">
-                        <img src="./assets/img/course/course-item-1.png"
-                            alt="Khóa học lập trình web với HTML, CSS, JavaScript hiển thị trên màn hình máy tính" />
-                    </div>
-                    <div class="courses__content">
-                        <h3 class="courses__title">Lập trình Web cơ bản</h3>
-                        <p class="courses__instructor">Giảng viên: Trần Thị B</p>
-                        <div class="courses__progress">
-                            <div class="courses__progress-bar" style="width: 65%"></div>
-                        </div>
-                        <div class="courses__meta">
-                            <span class="courses__progress-text">65% hoàn thành</span>
-                            <span class="courses__status">Đang học</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="home__heading" style="margin-top: 100px;">
+                <h2 class="home__heading-title">My Courses</h2>
+            </div>
 
-                <!-- Course Item 2 -->
-                <div class="courses__card">
-                    <div class="courses__image">
-                        <img src="./assets/img/course/course-item-2.png"
-                            alt="React JS ứng dụng thương mại điện tử với nhiều component UI" />
-                    </div>
-                    <div class="courses__content">
-                        <h3 class="courses__title">React JS nâng cao</h3>
-                        <p class="courses__instructor">Giảng viên: Lê Văn C</p>
-                        <div class="courses__progress">
-                            <div class="courses__progress-bar" style="width: 30%"></div>
-                        </div>
-                        <div class="courses__meta">
-                            <span class="courses__progress-text">30% hoàn thành</span>
-                            <span class="courses__status">Đang học</span>
-                        </div>
-                    </div>
-                </div>
+            <p class="course__empty">Hiện tại bạn chưa có đăng ký khóa học nào. Vui lý đăng ký khóa học ngay!</p>
 
-                <!-- Course Item 3 -->
-                <div class="courses__card">
-                    <div class="courses__image">
-                        <img src="./assets/img/course/course-item-3.png"
-                            alt="Node.js REST API với MongoDB trên nền tảng đám mây" />
-                    </div>
-                    <div class="courses__content">
-                        <h3 class="courses__title">Node.js Backend</h3>
-                        <p class="courses__instructor">Giảng viên: Phạm Thị D</p>
-                        <div class="courses__progress">
-                            <div class="courses__progress-bar" style="width: 100%"></div>
-                        </div>
-                        <div class="courses__meta">
-                            <span class="courses__progress-text">100% hoàn thành</span>
-                            <span class="courses__status">Hoàn thành</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="my__course-list row row-cols-3 gy-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
+
             </div>
         </div>
     </section>
@@ -225,6 +174,7 @@
         load("#footer", "./template/footer.html")
     </script>
     <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/my-course.js"></script>
 
 
 </body>

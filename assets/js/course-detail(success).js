@@ -1,68 +1,3 @@
-const courseListDetail = [
-    {
-        id: 1,
-        teacherId: 1,
-        levelsId: 1,
-        title: "HTML CSS từ Zero đến Hero",
-        image: "./assets/img/course/course-item4.png",
-        price: "$29.0",
-        isFree: true,
-        link: "./course-detail.html"
-    },
-    {
-        id: 2,
-        teacherId: 2,
-        levelsId: 2,
-        title: "HTML CSS Pro",
-        image: "./assets/img/course/course-item-1.png",
-        sale: "$29.0",
-        price: "$49.0",
-        isFree: false,
-        link: "./course-detail.html"
-    },
-    {
-        id: 3,
-        teacherId: 1,
-        levelsId: 1,
-        title: "Lập Trình Javascript Cơ Bản",
-        image: "./assets/img/course/course-item-5.png",
-        price: "$29.0",
-        isFree: true,
-        link: "./course-detail.html"
-    },
-    {
-        id: 4,
-        teacherId: 2,
-        levelsId: 2,
-        title: "Lập Trình Javascript Nâng Cao",
-        image: "./assets/img/course/course-item-6.png",
-        price: "$29.0",
-        isFree: true,
-        link: "./course-detail.html"
-    },
-    {
-        id: 5,
-        teacherId: 1,
-        levelsId: 3,
-        title: "Javascript Pro",
-        image: "./assets/img/course/course-item-7.png",
-        price: "$29.0",
-        sale: "$49.0",
-        isFree: false,
-        link: "./course-detail.html"
-    },
-    {
-        id: 6,
-        teacherId: 2,
-        levelsId: 3,
-        title: "Ngôn Ngữ Sass",
-        image: "./assets/img/course/course-item-8.png",
-        price: "$29.0",
-        isFree: false,
-        link: "./course-detail.html"
-    },
-];
-
 const colorCouse = [
     {
         colorId: 1,
@@ -94,16 +29,18 @@ const colorCouse = [
 const courseDetail = document.querySelector(".course__detail");
 const courseDetailInfo = document.querySelector(".course__detail-info");
 
+const myCourse = JSON.parse(localStorage.getItem("myCourse")) || [];
 const couseId = localStorage.getItem("courseId");
 
 console.log(couseId);
 
 
 if (couseId) {
-    const course = courseListDetail.find(course => course.id === Number(couseId));
+    const course = myCourse.find(course => course.id === Number(couseId));
+    const courseProgress = document.querySelector(".feature__progress-bar");
+    const courseProgressText = document.querySelector(".feature__complete-text");
 
-    console.log(course);
-
+    console.log(courseProgress, courseProgressText);
 
     if (course) {
         const color = colorCouse.find(color => color.colorId === course.id);
@@ -113,6 +50,9 @@ if (couseId) {
         }
 
         const hasDiscount = course.isFree || course.sale;
+
+        courseProgress.style.width = `${course.progress}%`;
+        courseProgressText.textContent = `Completed: ${course.progress}%`;
 
         let priceHTML = `
     <span class="price ${hasDiscount ? "price-line" : ""}">${course.price}</span>

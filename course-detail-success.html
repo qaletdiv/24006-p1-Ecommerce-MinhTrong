@@ -309,7 +309,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-1">
                                                     Watch
                                                 </a>
                                             </button>
@@ -326,7 +326,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-2">
                                                     Watch
                                                 </a>
                                             </button>
@@ -343,7 +343,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-3">
                                                     Watch
                                                 </a>
                                             </button>
@@ -375,7 +375,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-4">
                                                     Watch
                                                 </a>
                                             </button>
@@ -392,7 +392,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-5">
                                                     Watch
                                                 </a>
                                             </button>
@@ -409,7 +409,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-6">
                                                     Watch
                                                 </a>
                                             </button>
@@ -441,7 +441,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-7">
                                                     Watch
                                                 </a>
                                             </button>
@@ -458,7 +458,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-8">
                                                     Watch
                                                 </a>
                                             </button>
@@ -475,7 +475,7 @@
 
                                         <div class="accordion__item-course__info">
                                             <button class="accordion__item-course__info-btn">
-                                                <a href="./course-video.html">
+                                                <a href="./course-video.html?id=lesson-9">
                                                     Watch
                                                 </a>
                                             </button>
@@ -485,8 +485,6 @@
                                     </div>
                                 </li>
                             </ul>
-
-                            <p class="accordion__total">Total: 0 / 9</p>
                         </div>
 
                         <div class="tab-3">
@@ -609,31 +607,43 @@
                     </div>
                 </div>
 
-                <div class="form__comments">
-                    <h3 class="form__comments-title">Leave A Comment</h3>
-                    <p class="form__comments-note">
-                        Your email address will not be published. Required fields are marked *
-                    </p>
+                <form id="form">
+                    <div class="form__comments">
+                        <h3 class="form__comments-title">Leave A Comment</h3>
+                        <p class="form__comments-note">
+                            Your email address will not be published. Required fields are marked *
+                        </p>
 
-                    <div class="form__comments-row">
-                        <input type="text" class="form__comments-input" placeholder="Name">
-                        <input type="text" class="form__comments-input" placeholder="Email">
+                        <div class="form__comments-row">
+                            <input type="text" class="form__input form__comments-input" placeholder="Name" id="name"
+                                name="name">
+                            <input type="text" class="form__input form__comments-input" placeholder="Email" required
+                                pattern="[^ @]*@[^ @]*" id="email" name="email">
+                        </div>
+
+                        <div class="form__comments-cta">
+                            <textarea class="form__comments-textarea" placeholder="Comment" id="comment"
+                                name="comment"></textarea>
+                        </div>
+
+                        <div class="form__comments-save">
+                            <input type="checkbox" id="saveInfo" class="form__comments-checkbox" id="comments">
+                            <label for="saveInfo" class="form__comments-label">
+                                Save my name, email in this brower for the next time I comment
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn form__comments-btn btn--primary">Posts Comment</button>
                     </div>
+                </form>
 
-                    <div class="form__comments-cta">
-                        <textarea class="form__comments-textarea" placeholder="Comment"></textarea>
-                    </div>
+            </div>
+        </div>
 
-                    <div class="form__comments-save">
-                        <input type="checkbox" id="saveInfo" class="form__comments-checkbox">
-                        <label for="saveInfo" class="form__comments-label">
-                            Save my name, email in this brower for the next time I comment
-                        </label>
-                    </div>
-
-                    <button class="btn form__comments-btn">Posts Comment</button>
-                </div>
-
+        <div id="popup" class="popup">
+            <div class="popup__content">
+                <p>Cảm ơn bạn đã feedback</p>
+                <button class="popup-btn">Close</button>
             </div>
         </div>
 
@@ -645,6 +655,7 @@
     </script>
     <script src="./assets/js/course-detail(success).js"></script>
     <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/comment-form.js"></script>
 
 </body>
 

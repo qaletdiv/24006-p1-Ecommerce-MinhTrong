@@ -2310,6 +2310,9 @@ input::placeholder {
   background-color: #2580D5;
   border-radius: 8px;
 }
+.accordion__item-course__info img {
+  display: none;
+}
 .accordion__total {
   text-align: right;
   font-weight: 500;

@@ -102,6 +102,10 @@ function renderCourseDetail(courseId) {
 
     console.log(course);
 
+    const myCourse = JSON.parse(localStorage.getItem("myCourse")) || [];
+
+    const isExistCourse = myCourse.some((item) => item.id === parseInt(courseId));
+
 
     if (course) {
         const color = colorCouse.find(color => color.colorId === course.id);
@@ -155,7 +159,9 @@ function renderCourseDetail(courseId) {
                     </div>
     
                     <div class="course__detail-info__content-btn">
-                    ${course.isFree === true ? `
+                    ${isExistCourse ? `
+                        <button class="course__detail-btn course__detail-btn--go">Go to Course</button>
+                    ` : course.isFree === true ? `
                         <button class="course__detail-btn course__detail-btn--free">Get Started</button>
                     ` : `
                         <button class="course__detail-btn">
@@ -183,6 +189,14 @@ function renderCourseDetail(courseId) {
                     <img src="${course.image}" alt="${course.title}">
                 </div>
             `
+
+        const btnGoToCourse = document.querySelector(".course__detail-btn--go");
+
+        if (btnGoToCourse) {
+            btnGoToCourse.addEventListener("click", () => {
+                window.location.href = "/course-detail-success.html";
+            })
+        }
 
         const courseDetailFree = document.querySelector(".course__detail-btn--free");
 

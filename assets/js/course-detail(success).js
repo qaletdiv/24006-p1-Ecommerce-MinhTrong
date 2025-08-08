@@ -23,8 +23,7 @@ const colorCouse = [
         colorId: 6,
         colorClass: "backgroundSass"
     },
-
-]
+];
 
 const courseDetail = document.querySelector(".course__detail");
 const courseDetailInfo = document.querySelector(".course__detail-info");
@@ -32,15 +31,10 @@ const courseDetailInfo = document.querySelector(".course__detail-info");
 const myCourse = JSON.parse(localStorage.getItem("myCourse")) || [];
 const couseId = localStorage.getItem("courseId");
 
-console.log(couseId);
-
-
-if (couseId) {
-    const course = myCourse.find(course => course.id === Number(couseId));
+function renderMyCourse(courseId) {
+    const course = myCourse.find(course => course.id === Number(courseId));
     const courseProgress = document.querySelector(".feature__progress-bar");
     const courseProgressText = document.querySelector(".feature__complete-text");
-
-    console.log(courseProgress, courseProgressText);
 
     if (course) {
         const color = colorCouse.find(color => color.colorId === course.id);
@@ -102,4 +96,33 @@ if (couseId) {
             </div>
         `
     }
+
+    if (course && Array.isArray(course.completedLessons)) {
+        const lessonsItems = document.querySelectorAll(".accordion__item-course");
+
+        console.log(lessonsItems);
+
+
+        lessonsItems.forEach(item => {
+            const link = item.querySelector("a");
+            if (!link) return;
+
+            const url = new URL(link.href);
+            const lessonId = url.searchParams.get("id");
+
+            const checkIcon = item.querySelector("img[src*='check-icon']");
+
+            if (checkIcon) {
+                if (course.completedLessons.includes(lessonId)) {
+                    checkIcon.style.display = "inline-block";
+                } else {
+                    checkIcon.style.display = "none";
+                }
+            }
+        })
+    }
+}
+
+if (couseId) {
+    renderMyCourse(couseId);
 }

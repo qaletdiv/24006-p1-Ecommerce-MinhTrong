@@ -2796,6 +2796,7 @@ input::placeholder {
   background: #EAEAEA;
   padding-top: 90px;
   padding-bottom: 32px;
+  margin-top: 10px;
 }
 .footer__row {
   display: grid;
@@ -3582,6 +3583,7 @@ input::placeholder {
   background-color: white;
   position: relative;
   overflow: hidden;
+  margin-top: 100px;
 }
 .quiz__header {
   display: flex;
@@ -3756,6 +3758,27 @@ input::placeholder {
   .quiz__timer {
     margin-top: 0.5rem;
   }
+}
+
+.quiz__option.correct {
+  border: 2px solid green;
+  background-color: #e0ffe0;
+}
+
+.quiz__option.incorrect {
+  border: 2px solid red;
+  background-color: #ffe0e0;
+}
+
+.quiz__result-score {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quiz__result-answer {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .checkout {

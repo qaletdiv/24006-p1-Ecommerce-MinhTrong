@@ -3,6 +3,7 @@
     background-color: white;
     position: relative;
     overflow: hidden;
+    margin-top: 100px;
 
     &__header {
         display: flex;
@@ -209,4 +210,25 @@
             margin-top: 0.5rem;
         }
     }
+}
+
+.quiz__option.correct {
+    border: 2px solid green;
+    background-color: #e0ffe0;
+}
+
+.quiz__option.incorrect {
+    border: 2px solid red;
+    background-color: #ffe0e0;
+}
+
+.quiz__result-score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quiz__result-answer {
+    font-size: 20px;
+    font-weight: bold;
 }

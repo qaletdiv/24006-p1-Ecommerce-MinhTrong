@@ -1,4 +1,3 @@
-// Khi click vào phương thức thanh toán sẽ thêm 1 class để HIGHTLIGHT phần phương thức được chọn và sau đó xóa class checkout__checked để hiển thị ra dấu check
 const courseList = [
     {
         id: 1,
@@ -82,7 +81,28 @@ const popupButton = document.querySelector(".popup-btn");
 const popup = document.getElementById("popup");
 const courseId = localStorage.getItem("courseId");
 
-console.log(courseId);
+function saveCourse(course) {
+    const myCourse = JSON.parse(localStorage.getItem("myCourse")) || [];
+
+    const isExistCourse = myCourse.find((item) => item.id === course.id);
+
+    if (!isExistCourse) {
+        myCourse.push(
+            {
+                ...course,
+                progress: 0,
+                status: "Active",
+                link: "./course-detail-success.html",
+            }
+        );
+        localStorage.setItem("myCourse", JSON.stringify(myCourse));
+
+        return
+    }
+
+    return
+}
+
 
 if (courseId) {
     const course = courseList.find((course) => course.id === parseInt(courseId));
@@ -105,6 +125,8 @@ if (courseId) {
     if (course.sale) {
         checkoutSummaryTotal.querySelector("span:nth-child(2)").textContent = course.sale + "$";
     }
+
+    saveCourse(course);
 
 }
 
@@ -140,6 +162,15 @@ const handleOnSubMit = (event) => {
         alert("Vui lòng điền đầy đủ thông tin trước khi thanh toán.");
         return;
     }
+
+    const myCourse = JSON.parse(localStorage.getItem("myCourse")) || [];
+
+    if (!myCourse) {
+
+    }
+
+
+    localStorage.setItem("myCourse", JSON.stringify(myCourse));
 
     popup.classList.add("popup-open");
 }
